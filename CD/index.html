@@ -1,77 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Campatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Campatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
+
 <body>
-	<div class="header">
-		<div class="header-top">
-			<div class="row">
-				<div class="header-left col-md-8">
-					<a href="#">
-						<div class="logo">
-							<img src="img/logo.png" alt="">
-						</div>
-					</a>
-				</div>
-				<div class="header-right col-md-4">
-					<p class="login"><a href="#" >Đăng nhập</a></p>
-				</div>
-			</div>
-		</div>
-		<!--End header-top-->
+    <div class="header">
+        <div class="header-top">
+            <div class="row">
+                <div class="header-left col-md-8">
+                    <a href="#">
+                        <div class="logo">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="header-right col-md-4">
+                    <p class="login"><a href="#">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+        <!--End header-top-->
 
-		<div class="header-bottom">
-			<ul class="nav">	
-			  <li class="nav-item">
-			  	
-			    <a class="nav-link" href="#"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
-			  </li>
-			  <li class="nav-item">
-			    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;diễn đàn</a>
-			  </li>
-			</ul>
-		</div><!--End header-bottom-->
-	</div>
-	<div class="container">
-		<div style="height: 400px; background-color: blue;"></div>
-	</div>
-	<div class="footer">
-		<div class="row">
-		  <div class="col-md-4 footer-left">
-		  	<img src="img/unisoft.PNG" alt="">
-		  </div>
-		  <div class="col-md-4 footer-center">
-		  	<p>Copyright ©2017 Trường Đại học Sư phạm Hà Nội
-Phần mềm Quản lý đào tạo UniSoft 6.0 phát triển bởi <a href="">Thiên An</a></p>
-		  </div>
-		  <div class="col-md-4 footer-right">
-		  	<p class="footer-p">Sinh viên Online: <span id="sv-online">1</span></p>
-		  	<p class="footer-p">Khách Online: <span id="k-online">1</span></p>
-		  </div>
-		</div>
-	</div>
+        <div class="header-bottom">
+            <ul class="nav">
+                <li class="nav-item">
 
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+                    <a class="nav-link" href="#"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;diễn đàn</a>
+                </li>
+            </ul>
+        </div>
+        <!--End header-bottom-->
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div style="padding:5px " class="col col-xs-12 col-md-6 col-lg-4">
+                <div class="card" style="margin-bottom:10px">
+                    <div class="icon" style="background-color: white;">
+                        <i class="fas fa-user"></i> ĐĂNG NHẬP
+                    </div>
+                    <Form style="padding: 10px">
+                        <div class="user">
+                            <i class="fas fa-user"></i>
+                            <input name="LoginControl1$txtusername" type="text" id="LoginControl1_txtusername" class="form-control" placeholder="Tên đăng nhập">
+                        </div>
+                        <div class="password">
+                            <i class="fas fa-lock"></i>
+                            <input name="LoginControl1$txtusername" type="password" id="LoginControl1_txtusername" class="form-control" placeholder="Nhập mật khẩu">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input id="LoginControl1_chkremember" type="checkbox" name="LoginControl1$chkremember">Ghi nhớ mật khẩu
+                            </label>
+                        </div>
+                        <input type="submit" name="LoginControl1$btnDangNhap" value="Đăng nhập" id="LoginControl1_btnDangNhap" class="btn btn-success">
+                        <a href="/QuenMatKhau.aspx">Bạn quên mật khẩu của mình?</a>
+                    </Form>
+
+                </div>
+                <div class="card" style="margin-bottom:10px">
+                    <div class="icon" style="background-color: white;">
+                        <i class="fas fa-calendar-alt"></i> SỰ KIỆN
+                    </div>
+                    <div class="list-group-item">
+                        <div class="date">
+                            <span class="field-content-day">26</span><br>
+                            <span class="field-content-month">4/2019</span>
+                        </div>
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Xử lý trùng lịch thi</a>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="date">
+                            <span class="field-content-day">23</span><br>
+                            <span class="field-content-month">8/2019</span>
+                        </div>
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Một số thông tin về đào tạo chương trình 2</a>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="date">
+                            <span class="field-content-day">10</span><br>
+                            <span class="field-content-month">8/2018</span>
+                        </div>
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Trắc nghiệm phong cách của bạn</a>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="date">
+                            <span class="field-content-day">25</span><br>
+                            <span class="field-content-month">7/2018</span>
+                        </div>
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Quy chế đào tạo ĐH, CĐ hệ chính quy theo HTTC</a>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="date">
+                            <span class="field-content-day">25</span><br>
+                            <span class="field-content-month">4/2018</span>
+                        </div>
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Quy định Chuyển đổi điểm/miễn học, miễn thi NN, quy đổi NN tương đương</a>
+                    </div>
+                    <div class="list-group-item" align="right" style="display:block">
+                        <a href="forum/newslist.aspx?id=3">
+								  Xem tất cả </a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 5px" class=" col-xs-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top" src="">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 5px" class=" col-xs-12 col-md-6 col-lg-4">
+                <div class="card" style="margin-bottom:10px">
+                    <div class="icon" style="background-color: white;">
+                        <i class="fas fa-bell"></i> THÔNG BÁO
+                    </div>
+                    <div class="list-group-item">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Mức thu và thời gian thu học phí học kỳ 3 năm học 2018-2019 </a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Mức thu học phí các bậc đào tạo hệ chính quy năm học 2019-2020</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Hủy lớp tín chỉ kỳ HK3 năm học 2018 - 2019</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Kết quả phúc khảo các môn chung HK2 năm học 2018-2019</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Thời gian phúc khảo các môn chung HK2 năm học 2018-2019</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">ĐĂNG KÝ TÍN CHỈ HỌC KỲ III Năm học (2018 - 2019)</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Danh sách sinh viên không đủ điều kiện thi HK2 2018-2019 do nợ học phí</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Lịch thi các môn chung HK2 2018-2019</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Lịch thi Quản lý Hành chính Nhà nước và Quản lý ngành GD&ĐT</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Lịch thi đánh giá năng lực Tiếng Anh ngày 20-4-2019</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Lịch học QLHCNN & QL ngành GD&ĐT</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">THÔNG BÁO THU HỌC PHÍ BỔ SUNG HK2 NĂM HỌC 2018-2019</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Cập nhật học phí học ngoại ngữ 1,2 cho sinh viên học CT2</a>
+                    </div>
+                    <div class="list-group-item set-size">
+                        <a href="/forum/newscontent.aspx?id=375&amp;pg=0">Kết quả phúc khảo các môn chung HK1 năm học 2018-2019</a>
+                    </div>
+                    <div class="list-group-item" align="right" style="display:block">
+                        <a href="forum/newslist.aspx?id=3">
+								  Xem tất cả </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="col-md-4 footer-left">
+                <img src="img/unisoft.PNG" alt="">
+            </div>
+            <div class="col-md-4 footer-center">
+                <p>Copyright ©2017 Trường Đại học Sư phạm Hà Nội Phần mềm Quản lý đào tạo UniSoft 6.0 phát triển bởi <a href="">Thiên An</a></p>
+            </div>
+            <div class="col-md-4 footer-right">
+                <p class="footer-p">Sinh viên Online: <span id="sv-online">1</span></p>
+                <p class="footer-p">Khách Online: <span id="k-online">1</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 </body>
+
 </html>

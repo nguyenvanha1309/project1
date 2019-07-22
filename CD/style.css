@@ -1,69 +1,173 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-.header-left{
-	text-align: center;
-}
-.login{
-	margin-top: 15px;
-	font-size: 13px;
-}
-.login > a{
-	color: black;
-	text-transform: none;
-}
-.login :hover{
-	color: yellow;
-	
-}
-.header-right{
-	text-align: center;
-}
-.header-bottom{
-	padding-left: 30px;
-	background-color: #3399CC;
-}
-.nav-link{
-	color: white;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 13px;
-	margin-top: 3px;
-	margin-bottom: 3px;
-	margin-left: 10px;
-	line-height: 20px;
-}
-.nav-item:hover > .nav-link{
-	background-color: white;
-	color: #3399CC;
-}
-.footer{
-	margin: 0px;
-	padding: 0px;
-}
-.col-md-4{
-	padding: 0px;
-	margin: 0px;
-}
-.footer .row{
-	background-color: #666;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-.footer-left{
+.header-left {
+    text-align: center;
+}
 
-	text-align: center;
+.login {
+    margin-top: 15px;
+    font-size: 13px;
 }
-.footer-center{
-	text-align: center;
+
+.login>a {
+    color: black;
+    text-transform: none;
 }
-.footer-right{
-	text-align: center;
-	
+
+.login :hover {
+    color: yellow;
 }
-.footer-p{
-	margin: 0; 
-	padding: 0;
+
+.header-right {
+    text-align: center;
 }
+
+.header-bottom {
+    padding-left: 30px;
+    background-color: #3399CC;
+}
+
+.nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.nav-item:hover>.nav-link {
+    background-color: white;
+    color: #3399CC;
+}
+
+.footer {
+    margin: 0px;
+    padding: 0px;
+}
+
+.col-md-4 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer .row {
+    background-color: #666;
+}
+
+.footer-left {
+    text-align: center;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: center;
+}
+
+.footer-p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*thuong*/
+
+div.container-fluid {
+    background-color: gainsboro;
+}
+
+.icon {
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.col .card div {
+    padding-left: 10px;
+    background-color: #eeeeee;
+}
+
+.user {
+    position: relative;
+    border: 1px solid gainsboro;
+    height: 34px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.user i {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+}
+
+.user input {
+    position: absolute;
+    height: 32px;
+    width: 92%;
+    right: 0;
+    border: none;
+}
+
+.password {
+    position: relative;
+    border: 1px solid gainsboro;
+    height: 34px;
+    border-radius: 5px;
+}
+
+.password input {
+    position: absolute;
+    height: 32px;
+    width: 92%;
+    top: 0;
+    right: 0;
+    border: none;
+}
+
+.checkbox {
+    background-color: #fff !important;
+    margin: 10px 0 0px 0;
+}
+
+.checkbox label input {
+    margin-right: 10px;
+}
+
+.list-group-item {
+    background-color: white !important;
+    display: flex;
+    font-size: 10pt;
+}
+
+.list-group-item div {
+    flex: 1;
+}
+
+.list-group-item a {
+    flex: 6;
+}
+
+.date {
+    text-align: center;
+    padding-left: 0 !important;
+    height: 51px;
+    background-color: red !important;
+    margin-right: 10px;
+}
+
+.set-size {
+    height: 41px;
+}
+
+
+/*thuong*
