@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Campatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="row">
+                <div class="header-left col-md-8">
+                    <a href="#">
+                        <div class="logo">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="header-right col-md-4">
+                    <p class="login"><a href="#">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+        <!--End header-top-->
+
+        <div class="header-bottom">
+            <ul class="nav">
+                <li class="nav-item">
+
+                    <a class="nav-link" href="#"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;diễn đàn</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="login-box container">
+            <div class="card" style="margin:82px 0">
+                <div class="icon" style="background-color: #d9edf7;">
+                    <i class="fas fa-user"></i> ĐĂNG NHẬP
+                </div>
+                <Form style="padding: 10px">
+                    <div class="user">
+                        <i class="fas fa-user"></i>
+                        <input name="LoginControl1$txtusername" type="text" id="LoginControl1_txtusername" class="form-control" placeholder="Tên đăng nhập">
+                    </div>
+                    <div class="password">
+                        <i class="fas fa-lock"></i>
+                        <input name="LoginControl1$txtusername" type="password" id="LoginControl1_txtusername" class="form-control" placeholder="Nhập mật khẩu">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                                <input id="LoginControl1_chkremember" type="checkbox" name="LoginControl1$chkremember">Ghi nhớ mật khẩu
+                            </label>
+                    </div>
+                    <input type="submit" name="LoginControl1$btnDangNhap" value="Đăng nhập" id="LoginControl1_btnDangNhap" class="btn btn-success">
+                    <a href="/QuenMatKhau.aspx">Bạn quên mật khẩu của mình?</a>
+                </Form>
+
+            </div>
+        </div>
+
+</body>
+<div class="footer ">
+    <div class="row">
+        <div class="col-md-4 footer-left">
+            <img src="img/unisoft.PNG" alt="">
+        </div>
+        <div class="col-md-4 footer-center">
+            <p>Copyright ©2017 Trường Đại học Sư phạm Hà Nội Phần mềm Quản lý đào tạo UniSoft 6.0 phát triển bởi <a href="">Thiên An</a></p>
+        </div>
+        <div class="col-md-4 footer-right">
+            <p class="footer-p">Sinh viên Online: <span id="sv-online">1</span></p>
+            <p class="footer-p">Khách Online: <span id="k-online">1</span></p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+</html>

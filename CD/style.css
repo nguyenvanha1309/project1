@@ -91,6 +91,10 @@ div.container-fluid {
     border-bottom: 1px solid gainsboro;
 }
 
+.icon b {
+    color: #333333 !important;
+}
+
 .col .card div {
     padding-left: 10px;
     background-color: #eeeeee;
@@ -161,8 +165,12 @@ div.container-fluid {
     text-align: center;
     padding-left: 0 !important;
     height: 51px;
-    background-color: red !important;
+    background-color: #e74c3ced !important;
     margin-right: 10px;
+}
+
+.date span {
+    color: white;
 }
 
 .set-size {
@@ -197,5 +205,96 @@ div.container-fluid {
     vertical-align: middle;
 }
 
+.login-box .user input {
+    width: 96%;
+}
 
-/*thuong*
+.login-box .password input {
+    width: 96%;
+}
+
+.login-box .fa-lock {
+    margin: 8px 11px;
+}
+
+.footer-login {
+    position: relative;
+    bottom: 0;
+}
+
+
+/*chương trình đào tạo */
+
+#train {
+    display: flex;
+    overflow: auto;
+}
+
+#train ul {
+    list-style-type: none;
+}
+
+div.container .table-program-trainnig-left {
+    flex: 30%;
+    min-width: 200px;
+    border: 1px solid #D1DBE0;
+}
+
+div.container .table-program-trainnig-left .main-li {
+    font-size: 10pt;
+}
+
+.main-li-list {
+    margin-left: 10px;
+    color: #5555DD !important;
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+ul.list-group .main-li a {
+    color: black;
+}
+
+ul.list-group div.container .table-program-trainnig-right {
+    flex: 70%;
+}
+
+
+/*chương trình đào tạo */
+
+@media (min-width: 1200px) {
+    #train {
+        margin: 0 100px 0 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        margin-top: 10px;
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        margin-top: 10px;
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 10px;
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin-top: 10px;
+        max-width: 720px;
+    }
+}
+
+
+/*thuong*/
