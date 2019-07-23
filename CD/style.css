@@ -223,6 +223,18 @@ div.container-fluid {
 }
 
 
+/* Hướng dẫn đằng kí tín chỉ */
+
+.title-dangki {
+    color: green;
+    text-align: center;
+    font-size: x-large;
+}
+
+
+/*Hướng dẫn đăng kí tín chỉ */
+
+
 /*chương trình đào tạo */
 
 #train {
