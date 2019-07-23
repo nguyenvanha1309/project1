@@ -227,6 +227,7 @@ div.container-fluid {
 
 #train {
     display: flex;
+    flex-direction: row;
     overflow: auto;
 }
 
@@ -235,7 +236,6 @@ div.container-fluid {
 }
 
 div.container .table-program-trainnig-left {
-    flex: 30%;
     min-width: 200px;
     border: 1px solid #D1DBE0;
 }
@@ -256,7 +256,7 @@ ul.list-group .main-li a {
 }
 
 ul.list-group div.container .table-program-trainnig-right {
-    flex: 70%;
+    flex: 4;
 }
 
 
