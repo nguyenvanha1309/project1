@@ -5,6 +5,10 @@
     -moz-box-sizing: border-box;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .header-left {
     text-align: center;
 }
@@ -27,10 +31,15 @@
     text-align: center;
 }
 
-.header-bottom {
-    padding-left: 30px;
+#navbarNav {
     background-color: #3399CC;
 }
+
+#navbarNav ul li a {
+    color: white;
+}
+
+#navbarNav ul li.li-first {}
 
 .nav-link {
     color: white;
@@ -44,6 +53,11 @@
 }
 
 .nav-item:hover>.nav-link {
+    background-color: white;
+    color: #3399CC;
+}
+
+.nav-item:hover a {
     background-color: white;
     color: #3399CC;
 }
@@ -246,6 +260,24 @@ div.container-fluid {
 
 .table-search span {
     margin-right: 5px;
+}
+
+.table-search ul li {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.table-search ul li span {
+    font-weight: bold;
+    color: #333333;
+    font-size: 10pt;
+    text-align: right;
+    width: 130px;
+}
+
+.table-search ul li input {
+    width: 120px;
 }
 
 .table-search h3 {
