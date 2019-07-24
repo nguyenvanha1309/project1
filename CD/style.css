@@ -13,6 +13,10 @@ ul {
     text-align: center;
 }
 
+.header-bottom nav {
+    background-color: #3399CC;
+}
+
 .login {
     margin-top: 15px;
     font-size: 13px;
@@ -40,6 +44,14 @@ ul {
 }
 
 #navbarNav ul li.li-first {}
+
+#navbarNav ul li:hover a {
+    color: #3399CC;
+}
+
+#navbarNav ul li:hover a span i {
+    color: #3399CC;
+}
 
 .nav-link {
     color: white;
