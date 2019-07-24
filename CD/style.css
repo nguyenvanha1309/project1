@@ -235,6 +235,38 @@ div.container-fluid {
 /*Hướng dẫn đăng kí tín chỉ */
 
 
+/*Tra cứu văn bằng tốt nghiệp*/
+
+.table-search {
+    width: 600px;
+    min-width: 500px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.table-search span {
+    margin-right: 5px;
+}
+
+.table-search h3 {
+    text-align: center;
+    font-size: 12pt;
+}
+
+.table-search select {
+    margin: 0 auto;
+    width: 73%;
+}
+
+.table-search .custom-select {
+    height: calc(1em + .75rem + 2px);
+    line-height: 1;
+}
+
+
+/*Tra cứu văn bằng tốt nghiệp*/
+
+
 /*chương trình đào tạo */
 
 #train {
