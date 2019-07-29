@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/01ad2f7f4c.js"></script>
 
+
 </head>
 
 <body>
@@ -27,7 +28,7 @@
                     </a>
                 </div>
                 <div class="header-right col-md-4">
-                    <p class="login"><a href="#">Đăng nhập</a></p>
+                    <p class="login"><a href="Login.html">Đăng nhập</a></p>
                 </div>
             </div>
         </div>
@@ -62,50 +63,64 @@
                 </div>
             </nav>
         </div>
-
-        <div class="login-box container">
-            <div class="card" style="margin:82px 0">
-                <div class="icon" style="background-color: #d9edf7;">
-                    <i class="fas fa-user"></i> ĐĂNG NHẬP
+        <!--End header-bottom-->
+        <div style="height: auto;" class="table-search">
+            <h3>TRA CỨU VĂN BẰNG TỐT NGHIỆP</h3>
+            <ul>
+                <li style="display:flex;flex-direction:row;">
+                    <span style="flex: 1">Bậc đào tạo: </span>
+                    <select style="flex: 2" class="">
+                            <option selected>Hệ đại học</option>
+                            <option value="1">Hệ đại học </option>
+                            <option value="2">Hệ cao đẳng</option>
+                            <option value="3">Sau đại học</option>
+                            <option value="3">Văn bằng 2</option>
+                </select>
+                </li>
+                <li>
+                    <span>Mã sinh viên:</span>
+                    <input style="width: 150px;" type="text" name="MSV">
+                </li>
+                <li>
+                    <span>Họ tên:</span>
+                    <input style="width: 250px" type="text" name="NAME">
+                </li>
+                <li>
+                    <span>Ngày sinh:</span>
+                    <input type="text" name="NS">
+                    <span style="text-align: left">(ngày/tháng/năm)</span>
+                </li>
+                <li>
+                    <span>Số hiệu văn bằng:</span>
+                    <input type="text" name="SHVB">
+                </li>
+                <li>
+                    <span>Năm tốt nghiệp:</span>
+                    <input type="text" name="NTN">
+                </li>
+                <li>
+                    <span></span>
+                    <input style="width: 89px" type="submit" name="btnSearch" value="Tìm kiếm" id="btnSearch" class="btn btn-success ">
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="col-md-4 footer-left">
+                    <img src="img/unisoft.PNG" alt="">
                 </div>
-                <Form style="padding: 10px">
-                    <div class="user">
-                        <i class="fas fa-user"></i>
-                        <input name="LoginControl1$txtusername" type="text" id="LoginControl1_txtusername" class="form-control" placeholder="Tên đăng nhập">
-                    </div>
-                    <div class="password">
-                        <i class="fas fa-lock"></i>
-                        <input name="LoginControl1$txtusername" type="password" id="LoginControl1_txtusername" class="form-control" placeholder="Nhập mật khẩu">
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                                <input id="LoginControl1_chkremember" type="checkbox" name="LoginControl1$chkremember">Ghi nhớ mật khẩu
-                            </label>
-                    </div>
-                    <input type="submit" name="LoginControl1$btnDangNhap" value="Đăng nhập" id="LoginControl1_btnDangNhap" class="btn btn-success">
-                    <a href="/QuenMatKhau.aspx">Bạn quên mật khẩu của mình?</a>
-                </Form>
-
+                <div class="col-md-4 footer-center">
+                    <p>Copyright ©2017 Trường Đại học Sư phạm Hà Nội Phần mềm Quản lý đào tạo UniSoft 6.0 phát triển bởi <a href="">Thiên An</a></p>
+                </div>
+                <div class="col-md-4 footer-right">
+                    <p class="footer-p">Sinh viên Online: <span id="sv-online">1</span></p>
+                    <p class="footer-p">Khách Online: <span id="k-online">1</span></p>
+                </div>
             </div>
         </div>
-
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-<div class="footer ">
-    <div class="row">
-        <div class="col-md-4 footer-left">
-            <img src="img/unisoft.PNG" alt="">
-        </div>
-        <div class="col-md-4 footer-center">
-            <p>Copyright ©2017 Trường Đại học Sư phạm Hà Nội Phần mềm Quản lý đào tạo UniSoft 6.0 phát triển bởi <a href="">Thiên An</a></p>
-        </div>
-        <div class="col-md-4 footer-right">
-            <p class="footer-p">Sinh viên Online: <span id="sv-online">1</span></p>
-            <p class="footer-p">Khách Online: <span id="k-online">1</span></p>
-        </div>
-    </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </html>
