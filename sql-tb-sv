@@ -57,3 +57,42 @@ CREATE TABLE VanBang(
      SoHieuVB int(50),
      NamTotNghiep int(20)
 )
+
+ALTER TABLE users
+ADD FOREIGN KEY (MaSv) REFERENCES sinhvien(MaSv)
+
+///
+INSERT INTO `sinhvien` (`MaSv`, `HoTen`, `NgaySinh`, `GioiTinh`, `QuocTich`, `SDT`, `CMND`, `Email`, `MaKhoa`, `MaK`, `MaLop`, `MaMon`) VALUES (6602, 'Nguyen Van B', '14-04-1998', 'Nam', 'Vi?t Nam', 0128456788, 0987688888, 'nguyenvanb@gmail.com', NULL, NULL, NULL, NULL);
+INSERT INTO `sinhvien` (`MaSv`, `HoTen`, `NgaySinh`, `GioiTinh`, `QuocTich`, `SDT`, `CMND`, `Email`, `MaKhoa`, `MaK`, `MaLop`, `MaMon`) VALUES (6603, 'Nguyen Thi C', '13-09-1998', 'N?', 'Vi?t Nam', 0128459988, 0987699888, 'nguyenthic@gmail.com', NULL, NULL, NULL, NULL);
+INSERT INTO `sinhvien` (`MaSv`, `HoTen`, `NgaySinh`, `GioiTinh`, `QuocTich`, `SDT`, `CMND`, `Email`, `MaKhoa`, `MaK`, `MaLop`, `MaMon`) VALUES (6604, 'Nguyen Thi D', '03-04-1998', 'N?', 'Vi?t Nam', 0128456777, 0987688877, 'nguyenthid@gmail.com', NULL, NULL, NULL, NULL);
+INSERT INTO `sinhvien` (`MaSv`, `HoTen`, `NgaySinh`, `GioiTinh`, `QuocTich`, `SDT`, `CMND`, `Email`, `MaKhoa`, `MaK`, `MaLop`, `MaMon`) VALUES (6605, 'Nguyen Van E', '14-01-1998', 'Nam', 'Vi?t Nam', 0123333788, 0987333388, 'nguyenvane@gmail.com', NULL, NULL, NULL, NULL);
+
+//
+
+INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`) VALUES ('CNTT', 'Công Ngh? Thông Tin');
+INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`) VALUES ('GDMN', 'Giáo D?c M?m Non');
+INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`) VALUES ('MATH', 'Toán');
+INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`) VALUES ('LS', 'L?ch S?');
+INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`) VALUES ('LIT', 'Ng? Van');
+INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`) VALUES ('CTXH', 'Công Tác Xã H?i');
+///
+INSERT INTO `k` (`MaK`, `TenK`) VALUES ('66', 'Khóa 66');
+//
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('LTM1', 'L?p trình m?ng 1', 2, 30, 'B?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('LTC#', 'L?p trình .NET', 3, 45, 'B?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('LTM2', 'L?p trình m?ng 2', 2, 30, 'Không b?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('MMT01', 'M?ng máy tính', 3, 45, 'B?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('MMT02', 'M?ng máy tính nâng cao', 2, 30, 'B?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('LTC++', 'L?p trình C++', 2, 30, 'B?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('NNHT', 'Ngôn ng? hình th?c', 3, 45, 'B?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('ENG01', 'Ti?ng Anh 1', 4, 60, 'Không b?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('ENG02', 'Ti?ng Anh 2', 2, 30, 'Không b?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('ENG03', 'Ti?ng Anh 3', 2, 30, 'Không b?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('ENGCN1', 'Ti?ng Anh chuyên ngành 1', 3, 45, 'B?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('ENGCN2', 'Ti?ng Anh chuyên ngành 2', 2, 30, 'Không b?t bu?c');
+INSERT INTO `monhoc` (`MaMon`, `TenMon`, `SoTinChi`, `SoTiet`, `KieuMonHoc`) VALUES ('KTCN', 'Ki?n t?p công ngh?', 1, 15, 'B?t bu?c');
+
+//
+INSERT INTO `users` ( `KieuUser`, `UserName`, `PassWord`, `MaSv`, `MaGv`) VALUES ( 'Giáo v?', 'admin1', 'admin1', NULL, NULL);
+//
+INSERT INTO `giaovu` (`MaGv`, `HoTen`, `NgaySinh`, `DiaChi`, `SDT`, `CMND`, `Email`, `MaKhoa`) VALUES (1, 'Tr?n Thu Hà', '05-11-1960', 'Hà N?i', 0357999999, 0357864210, 'tranthuha@gmail.com', 'CNTT');
