@@ -24,7 +24,24 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
+--Cấu trúc bảng cho bảng 'tin tuc'
+CREATE TABLE `tintuc` ( 
+  `anh` VARBINARY(100) NOT NULL , 
+  `tieude` TEXT NOT NULL , 
+  `noidung` LONGTEXT NOT NULL , 
+  `id` INT(10) NOT NULL AUTO_INCREMENT , 
+  `date` DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+--Cấu trúc bảng cho bảng 'sukien'
+CREATE TABLE `sukien` ( 
+  `date` DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+  `tieude` TEXT NOT NULL , 
+  `noidung` LONGTEXT NOT NULL , 
+  `id` INT(10) NOT NULL AUTO_INCREMENT , 
+--Cấu trúc bảng cho bảng 'thongbao'
+CREATE TABLE `thongbao` ( 
+  `tieude` TEXT NOT NULL , 
+  `noidung` LONGTEXT NOT NULL , 
+  `id` INT(10) NOT NULL AUTO_INCREMENT , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 -- Cấu trúc bảng cho bảng `diem`
 --
 
