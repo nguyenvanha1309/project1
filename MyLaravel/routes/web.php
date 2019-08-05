@@ -40,3 +40,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes(['register' => false]);
+route::get('newlist',funtion(){
+	return view('newlist');
+});
