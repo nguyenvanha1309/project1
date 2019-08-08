@@ -49,4 +49,11 @@ Route::post('login','AuthController@login') ->name('login');
 //thêm sửa xóa user
 route::get('user/create','Usercontroller@create');
 
+<<<<<<< HEAD
 Route::post('user/create','Usercontroller@store');
+=======
+Auth::routes(['register' => false]);
+route::get('newlist',funtion(){
+	return view('newlist');
+});
+>>>>>>> a174ac4765c2e3351d9a782f4279c30d8b45d99b
