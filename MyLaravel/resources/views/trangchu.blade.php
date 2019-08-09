@@ -50,7 +50,7 @@
                             <a class="nav-link" href="TBLDKH.html"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="tracuuvanbang"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
+                            <a class="nav-link" href="Tracuuvanbang.html"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="huongdandangki.html"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
@@ -71,20 +71,21 @@
                     <div class="icon" style="background-color: white;">
                         <i class="fas fa-user"></i> <b> ĐĂNG NHẬP</b>
                     </div>
-                    <Form action="{{('login')}}" method="post" style="padding: 10px">
+                    <Form action="{{url('trangchu')}}" method="post" style="padding: 10px">
                         <div class="user">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="taikhoan" class="form-control" placeholder="Tên đăng nhập">
+                            <input type="text" name="name" class="form-control" placeholder="Tên đăng nhập">
                         </div>
                         <div class="password">
                             <i class="fas fa-lock"></i>
-                            <input type="password" name="passworD" class="form-control" placeholder="Nhập mật khẩu">
+                            <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu">
                         </div>
                         <div class="checkbox">
                             <label>
                                 <input  type="checkbox" >Ghi nhớ mật khẩu
                             </label>
                         </div>
+                        {!! csrf_field() !!}
                         <input type="submit"  value="Đăng nhập"  class="btn btn-success">
                         <a href="#">Bạn quên mật khẩu của mình?</a>
                     </Form>
