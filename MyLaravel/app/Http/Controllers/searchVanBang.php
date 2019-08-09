@@ -13,11 +13,11 @@ class searchVanBang extends Controller
     {
         $msV =$request ->MSV;
         // $msv = DB::table('vanbang')->select('MaSv')->get();
-        $msv = DB::table('vanbang')->Join('sinhvien', 'vanbang.MaSv', '=', 'sinhvien.MaSv')->where
+        $msv = DB::table('vanbang')->Join('sinhvien', 'vanbang.vanbang_MaSv', '=', 'sinhvien.sinhvien_MaSv')->where
         ([
-            'MaSv'=> $request->MSV
+            'vanbang_MaSv'=> $request->MSV
             ])
-        ->select('SoHieuVB','NamTotNghiep','TypeTotNghiep','sinhvien.HoTen','sinhvien.NgaySinh','sinhvien.GioiTinh')->get();
+        ->select('vanbang.SoHieuVB','vanbang.NamTotNghiep','vanbang.TypeTotNghiep','sinhvien.HoTen','sinhvien.NgaySinh','sinhvien.GioiTinh')->get();
         return $msv;
         
     }
