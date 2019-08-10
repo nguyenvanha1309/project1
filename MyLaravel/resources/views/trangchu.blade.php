@@ -33,7 +33,6 @@
             </div>
         </div>
         <!--End header-top-->
-
         <div class="header-bottom ">
             <nav class="navbar navbar-expand-lg navbar-light " style="padding:0">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,10 +71,10 @@
                     <div class="icon" style="background-color: white;">
                         <i class="fas fa-user"></i> <b> ĐĂNG NHẬP</b>
                     </div>
-                    <Form action="{{('log')}}" method="post" style="padding: 10px">
+                    <Form action="{{url('trangchu')}}" method="post" style="padding: 10px">
                         <div class="user">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="taikhoan" class="form-control" placeholder="Tên đăng nhập">
+                            <input type="text" name="name" class="form-control" placeholder="Tên đăng nhập">
                         </div>
                         <div class="password">
                             <i class="fas fa-lock"></i>
@@ -86,6 +85,7 @@
                                 <input  type="checkbox" >Ghi nhớ mật khẩu
                             </label>
                         </div>
+                        {!! csrf_field() !!}
                         <input type="submit"  value="Đăng nhập"  class="btn btn-success">
                         <a href="#">Bạn quên mật khẩu của mình?</a>
                     </Form>

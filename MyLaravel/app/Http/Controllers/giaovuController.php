@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Auth;
 class giaovuController extends Controller
 {
     
-	//MaSv,HoTen,NgaySinh,GioiTinh,SDT,CMND,Email,MaKhoa,MaK
+    //MaSv,HoTen,NgaySinh,GioiTinh,SDT,CMND,Email,MaKhoa,MaK
 
     public function index()
     {
         //Lấy danh sách sinh viên từ database
- 		
+        
         //Gọi đến file list.blade.php trong thư mục "resources/views/hocsinh" với giá trị gửi đi tên listhocsinh = $getData
         return view('sinhvien.list');
     }
@@ -31,7 +31,6 @@ class giaovuController extends Controller
         return view('sinhvien.create');
     }
 
-    
     public function store(Request $request)
     {
         $allRequest  = $request->all();
@@ -48,7 +47,7 @@ class giaovuController extends Controller
         $k = $allRequest['K'];
         //Gán giá trị vào array
         $dataInsertToDatabase = array(
-            'MaSv'  => $masv,
+            'sinhvien_MaSv'  => $masv,
             'HoTen' => $ten,
             'NgaySinh' => $ns,
             'GioiTinh' => $gioitinh,
@@ -61,51 +60,51 @@ class giaovuController extends Controller
             
         );
         $datausers = array(
-        	'KieuUser' => 'SV',
-        	'UserName' => $masv,
-        	'PassWord' => $masv,
+            'KieuUser' => 'SV',
+            'UserName' => $masv,
+            'PassWord' => $masv,
         );
-        	 $msv = DB::select('select MaSv from sinhvien ­­­­­­­­');
-        	 $ac = $allRequest['masv'];
-        	 echo "$ac<br> ";
+             $msv = DB::select('select MaSv from sinhvien ­­­­­­­­');
+             $ac = $allRequest['masv'];
+             echo "$ac<br> ";
  
         
-        	 if (Auth::attempt([$kq => $ac]))
-        	         {
+             if (Auth::attempt([$kq => $ac]))
+                     {
 
-        	            echo "đúng";
-        	         } else {
-        	             echo "sai";
-        	         
-        	         }
+                        echo "đúng";
+                     } else {
+                         echo "sai";
+                     
+                     }
 
 
-     //    	 foreach ($msv as $kq ) {
-     //    	 	$ex=$kq->MaSv;
+     //      foreach ($msv as $kq ) {
+     //         $ex=$kq->MaSv;
 
-     //    	 	 if ($ac == $ex) {
-     //    	  	 	echo "<br>Sinh vien da ton tai!";
-     //    	  	 	echo "<a href='http://localhost/MyLaravel/public/createsv'>Quay lai</a>";
-     //    	  	 	return $bb;
-     //    	 	}else{
+     //          if ($ac == $ex) {
+     //             echo "<br>Sinh vien da ton tai!";
+     //             echo "<a href='http://localhost/MyLaravel/public/createsv'>Quay lai</a>";
+     //             return $bb;
+     //         }else{
 
-	    //     			$pattern = '/@gmail.com/';
-		   //      	$pattern1 = '/@yahoo.com/';
-					// if (preg_match($pattern, $email) || preg_match($pattern1, $email)){
+        //              $pattern = '/@gmail.com/';
+           //       $pattern1 = '/@yahoo.com/';
+                    // if (preg_match($pattern, $email) || preg_match($pattern1, $email)){
 
-					//     //$insertData = DB::table('sinhvien')->insert($dataInsertToDatabase);
-					//     //$insertUser = DB::table('users')->insert($datausers);
-					//     echo "them thanh cong! <br>"; 
-					//     echo $ten; 
-					//     echo "<a href='http://localhost/MyLaravel/public/listsv'>Quay lai trang sinh vien</a>";
-					// }else{
-					// 	echo "email ko dung dinh dang!";
-					// 	echo "<a href='http://localhost/MyLaravel/public/createsv'>Quay lai</a>";
-					// }
-     //    	 	}
-     //    	 }
-        	
-        	
+                    //     //$insertData = DB::table('sinhvien')->insert($dataInsertToDatabase);
+                    //     //$insertUser = DB::table('users')->insert($datausers);
+                    //     echo "them thanh cong! <br>"; 
+                    //     echo $ten; 
+                    //     echo "<a href='http://localhost/MyLaravel/public/listsv'>Quay lai trang sinh vien</a>";
+                    // }else{
+                    //  echo "email ko dung dinh dang!";
+                    //  echo "<a href='http://localhost/MyLaravel/public/createsv'>Quay lai</a>";
+                    // }
+     //         }
+     //      }
+            
+            
         
         //$result =DB::select('select MaSv,HoTen,NgaySinh,GioiTinh,QuocTich,SDT,CMND,Email,MaKhoa,MaK from sinhvien ');
         // MaSv,HoTen,NgaySinh,GioiTinh,SDT,CMND,Email,MaKhoa,MaK

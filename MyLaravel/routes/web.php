@@ -11,7 +11,7 @@
 |
 */
 Route::get('select', function () {
-    $result =DB::select('select UserName, PassWord from users where id = ?', [1]);
+    $result =DB::select('select * from sinhvien ');
     return $result;
 
 });
@@ -19,25 +19,33 @@ Route::get('select', function () {
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('trangchu', function () {
-    return view('trangchu');
-});
+// Route::get('trangchu', function () {
+//     return view('trangchu');
+// });
+// Route::get('trgchu', function () {
+//     return view('trgchu');
+// });
 // Route::get('log', function () {
 //     return view('admin.users.log');
 // });
-route::get('log','LoginController@getLogin');
-Route::post('log','LoginController@postLogin');
+Route::get('trangchu','AuthController@getLogin');
+Route::post('trangchu','AuthController@postLogin');
 
 // route::get('dangnhap','LoginController@getLogin');
 // Route::post('dangnhap','LoginController@postLogin');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes(['register' => false]);
+
+Route::post('login','AuthController@check');
+
 
 Auth::routes(['register' => false]);
 Route::get('listsv', 'giaovuController@index');

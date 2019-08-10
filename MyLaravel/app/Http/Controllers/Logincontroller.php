@@ -12,9 +12,9 @@ use Auth;
 use App\User;
 class LoginController extends Controller
 {
-    public function getLogin(){
-        return view('admin.users.log');
-    }
+    // public function getLogin(){
+    //     return view('admin.users.log');
+    // }
     // public function postLogin()
     // {
     //     $MMTK = Input::get('taikhoan');
@@ -27,17 +27,17 @@ class LoginController extends Controller
     //         return Redirect::to('log');
     //     }
     // }
-    public function postLogin(Request $request)
-    {
-        $mktk =$request ->taikhoan;
-        $pass =$request ->password;
-        if(Auth::attempt(['UserName' => $mktk  , 'PassWord' => $pass])){
-            return Redirect::to('admin.layout.index');
-        }
-            else {
-                return Redirect::to('log');
-            }
+    // public function login(Request $request)
+    // {  
+    //     $user =$request['user'];
+    //     $pass =$request['pass'];
+    //     if(Auth::attempt(['UserName' => $user  , 'PassWord' => $pass])){
+    //         return view("home");
+    //     }
+    //         else {
+    //             return view("trangchu");
+    //         }
             
-        }
+    //     }
     }
 
