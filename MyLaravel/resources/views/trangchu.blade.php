@@ -17,7 +17,56 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 @include('admin.layout.header')
+=======
+    <div class="header">
+        <div class="header-top">
+            <div class="row">
+                <div class="header-left col-md-8">
+                    <a href="#">
+                        <div class="logo">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="header-right col-md-4">
+                    <p class="login"><a href="log">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+        <!--End header-top-->
+        <div class="header-bottom ">
+            <nav class="navbar navbar-expand-lg navbar-light " style="padding:0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item li-first">
+                            <a class="nav-link" href="#"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Chuongtrinhdaotao.html"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="TBLDKH.html"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Tracuuvanbang.html"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="huongdandangki.html"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;diễn đàn</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--End header-bottom-->
+>>>>>>> 73123e2108342dd366e2bee7b2cee3133fb832b9
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -26,20 +75,21 @@
                     <div class="icon" style="background-color: white;">
                         <i class="fas fa-user"></i> <b> ĐĂNG NHẬP</b>
                     </div>
-                    <Form action="{{('login')}}" method="post" style="padding: 10px">
+                    <Form action="{{url('trangchu')}}" method="post" style="padding: 10px">
                         <div class="user">
                             <i class="fas fa-user"></i>
-                            <input type="text" name="taikhoan" class="form-control" placeholder="Tên đăng nhập">
+                            <input type="text" name="name" class="form-control" placeholder="Tên đăng nhập">
                         </div>
                         <div class="password">
                             <i class="fas fa-lock"></i>
-                            <input type="password" name="passworD" class="form-control" placeholder="Nhập mật khẩu">
+                            <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu">
                         </div>
                         <div class="checkbox">
                             <label>
                                 <input  type="checkbox" >Ghi nhớ mật khẩu
                             </label>
                         </div>
+                        {!! csrf_field() !!}
                         <input type="submit"  value="Đăng nhập"  class="btn btn-success">
                         <a href="#">Bạn quên mật khẩu của mình?</a>
                     </Form>
