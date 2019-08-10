@@ -33,6 +33,7 @@
             </div>
         </div>
         <!--End header-top-->
+
         <div class="header-bottom ">
             <nav class="navbar navbar-expand-lg navbar-light " style="padding:0">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +72,7 @@
                     <div class="icon" style="background-color: white;">
                         <i class="fas fa-user"></i> <b> ĐĂNG NHẬP</b>
                     </div>
-                    <Form action="{{('login')}}" method="post" style="padding: 10px">
+                    <Form action="{{('log')}}" method="post" style="padding: 10px">
                         <div class="user">
                             <i class="fas fa-user"></i>
                             <input type="text" name="taikhoan" class="form-control" placeholder="Tên đăng nhập">
