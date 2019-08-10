@@ -28,9 +28,16 @@ Route::get('log', function () {
 Route::get('tracuuvanbang', function () {
     return view('admin.vanbang.tracuuvanbang');
 });
+Route::get('viewsearchvanbang', function () {
+    return view('viewsearchvanbang');
+});
+Route::get('huongdandangki', function () {
+    return view('admin.layout.huongdandangki');
+});
+Route::get('chuongtrinhdaotao', function () {
+    return view('admin.layout.chuongtrinhdaotao');
+});
 
-route::get('log','Logincontroller@getLogin');
-Route::post('log','Logincontroller@postLogin');
 //
 Route::post('tracuuvanbang','searchVanBang@postvanbang');
 // route::get('dangnhap','LoginController@getLogin');
