@@ -64,49 +64,40 @@ class giaovuController extends Controller
             'UserName' => $masv,
             'PassWord' => $masv,
         );
-             $msv = DB::select('select MaSv from sinhvien ­­­­­­­­');
+             $msv = DB::select('select sinhvien_MaSv from sinhvien ­­­­­­­­');
              $ac = $allRequest['masv'];
              echo "$ac<br> ";
  
         
-             if (Auth::attempt([$kq => $ac]))
-                     {
 
-                        echo "đúng";
-                     } else {
-                         echo "sai";
-                     
-                     }
+          foreach ($msv as $kq ) {
+             $ex=$kq->sinhvien_MaSv;
 
+              if ($ac == $ex) {
+                 echo "<br>Sinh vien da ton tai!";
+                 echo "<a href='http://localhost/MyLaravel/public/createsv'>Quay lai</a>";
+                 return $bb;
+             }else{
 
-     //      foreach ($msv as $kq ) {
-     //         $ex=$kq->MaSv;
+                     $pattern = '/@gmail.com/';
+                 $pattern1 = '/@yahoo.com/';
+                    if (preg_match($pattern, $email) || preg_match($pattern1, $email)){
 
-     //          if ($ac == $ex) {
-     //             echo "<br>Sinh vien da ton tai!";
-     //             echo "<a href='http://localhost/MyLaravel/public/createsv'>Quay lai</a>";
-     //             return $bb;
-     //         }else{
-
-        //              $pattern = '/@gmail.com/';
-           //       $pattern1 = '/@yahoo.com/';
-                    // if (preg_match($pattern, $email) || preg_match($pattern1, $email)){
-
-                    //     //$insertData = DB::table('sinhvien')->insert($dataInsertToDatabase);
-                    //     //$insertUser = DB::table('users')->insert($datausers);
-                    //     echo "them thanh cong! <br>"; 
-                    //     echo $ten; 
-                    //     echo "<a href='http://localhost/MyLaravel/public/listsv'>Quay lai trang sinh vien</a>";
-                    // }else{
-                    //  echo "email ko dung dinh dang!";
-                    //  echo "<a href='http://localhost/MyLaravel/public/createsv'>Quay lai</a>";
-                    // }
-     //         }
-     //      }
+                        //$insertData = DB::table('sinhvien')->insert($dataInsertToDatabase);
+                        //$insertUser = DB::table('users')->insert($datausers);
+                        echo "them thanh cong! <br>"; 
+                        echo $ten; 
+                        echo "<a href='http://localhost/MyLaravel/public/listsv'>Quay lai trang sinh vien</a>";
+                    }else{
+                     echo "email ko dung dinh dang!";
+                     echo "<a href='http://localhost/MyLaravel/public/createsv'>Quay lai</a>";
+                    }
+             }
+          }
             
             
         
-        //$result =DB::select('select MaSv,HoTen,NgaySinh,GioiTinh,QuocTich,SDT,CMND,Email,MaKhoa,MaK from sinhvien ');
+        // $result =DB::select('select MaSv,HoTen,NgaySinh,GioiTinh,QuocTich,SDT,CMND,Email,MaKhoa,MaK from sinhvien ');
         // MaSv,HoTen,NgaySinh,GioiTinh,SDT,CMND,Email,MaKhoa,MaK
         // Insert vào bảng tbl_hocsinh
         // Kiểm tra Insert để trả về một thông báo
@@ -117,8 +108,8 @@ class giaovuController extends Controller
         //     Session::flash('error', 'Thêm thất bại!');
         // }
         
-        //Thực hiện chuyển trang
-        //return redirect('sinhvien/create');
+        // Thực hiện chuyển trang
+        // return redirect('sinhvien/create');
 
     }
 

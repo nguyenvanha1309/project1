@@ -13,6 +13,7 @@
 </head>
 
 <body>
+   
     <div class="header">
         <div class="header-top">
             <div class="row">
@@ -62,8 +63,15 @@
                 <div class="avatar">
                     <img src="img/avt.jpg" width="80px" height="auto" alt="">
                     <p></p>
-                    <p class="name">TRẦN HUY CÔNG</p>
-                    <p class="id">665105007</p>
+                    <Form action="{{url('trgchu')}}" method="post" style="padding: 10px">
+                    <p class="name">
+                        @foreach($postname as $value){{$value}}<br>
+                        @endforeach
+                               
+                    <p class="id"></p>
+                    {!! csrf_field() !!}
+
+                 </Form>
                 </div>
                 <div class="under-avt">
                     <div class="btn-group-vertical">

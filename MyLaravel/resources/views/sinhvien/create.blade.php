@@ -9,7 +9,7 @@
 	
 			<div>
 		<?php 
-		    $result =DB::select('select MaSv,HoTen,NgaySinh,GioiTinh,SDT,CMND,Email,MaKhoa,MaK from sinhvien ');
+		    $result =DB::select('select sinhvien_MaSv,HoTen,NgaySinh,GioiTinh,SDT,CMND,Email,MaKhoa,MaK from sinhvien ');
 		  	$khoa = DB::select('select MaKhoa,TenKhoa from khoa');
 		  	$k = DB::select('select MaK,TenK from k');
 		 ?>

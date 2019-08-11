@@ -17,9 +17,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-@include('admin.layout.header')
-=======
+   
     <div class="header">
         <div class="header-top">
             <div class="row">
@@ -66,7 +64,6 @@
             </nav>
         </div>
         <!--End header-bottom-->
->>>>>>> 73123e2108342dd366e2bee7b2cee3133fb832b9
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -260,7 +257,20 @@
         </div>
 
     </div>
-    @include('admin.layout.footer')
+    <div class="footer">
+        <div class="row">
+            <div class="col-md-4 footer-left">
+                <img src="img/unisoft.PNG" alt="">
+            </div>
+            <div class="col-md-4 footer-center">
+                <p>Copyright ©2017 Trường Đại học Sư phạm Hà Nội Phần mềm Quản lý đào tạo UniSoft 6.0 phát triển bởi <a href="#">Thiên An</a></p>
+            </div>
+            <div class="col-md-4 footer-right">
+                <p class="footer-p">Sinh viên Online: <span id="sv-online">1</span></p>
+                <p class="footer-p">Khách Online: <span id="k-online">1</span></p>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -19,29 +19,6 @@ Route::get('select', function () {
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
-Route::get('trangchu', function () {
-    return view('trangchu');
-});
-Route::get('log', function () {
-    return view('admin.users.log');
-});
-Route::get('tracuuvanbang', function () {
-    return view('admin.vanbang.tracuuvanbang');
-});
-Route::get('viewsearchvanbang', function () {
-    return view('viewsearchvanbang');
-});
-Route::get('huongdandangki', function () {
-    return view('admin.layout.huongdandangki');
-});
-Route::get('chuongtrinhdaotao', function () {
-    return view('admin.layout.chuongtrinhdaotao');
-});
-
-//
-Route::post('tracuuvanbang','searchVanBang@postvanbang');
-=======
 // Route::get('trangchu', function () {
 //     return view('trangchu');
 // });
@@ -53,8 +30,7 @@ Route::post('tracuuvanbang','searchVanBang@postvanbang');
 // });
 Route::get('trangchu','AuthController@getLogin');
 Route::post('trangchu','AuthController@postLogin');
-
->>>>>>> 73123e2108342dd366e2bee7b2cee3133fb832b9
+Route::post('trgchu','AuthController@postLogin');
 // route::get('dangnhap','LoginController@getLogin');
 // Route::post('dangnhap','LoginController@postLogin');
 
@@ -76,3 +52,4 @@ Route::get('listsv', 'giaovuController@index');
 Route::get('createsv', 'giaovuController@create');
 Route::get('editsv', 'giaovuController@edit');
 Route::post('/store', ['as'=>'store','uses'=>'giaovuController@store']);
+

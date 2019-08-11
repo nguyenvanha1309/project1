@@ -10,7 +10,7 @@
 
 	<div><h1 style="text-transform: uppercase; color: green; text-align: center;">trang list sinh viên</h1>
 	<?php 
-	    $result =DB::select('select MaSv,HoTen,NgaySinh,GioiTinh,QuocTich,SDT,CMND,Email,MaKhoa,MaK from sinhvien ');
+	    $result =DB::select('select sinhvien_MaSv,HoTen,NgaySinh,GioiTinh,QuocTich,SDT,CMND,Email,MaKhoa,MaK from sinhvien ');
 	 ?>
 	 </div>
 	 <br>
@@ -40,7 +40,7 @@
     	foreach ($result as $value): $stt++ ?>
       <tr>
       	<td>{{$stt}}</td>
-        <td>{{$value->MaSv}}</td>
+        <td>{{$value->sinhvien_MaSv}}</td>
         <td>{{$value->HoTen}}</td>
         <td>{{$value->NgaySinh}}</td>
         <td>{{$value->GioiTinh}}</td>
