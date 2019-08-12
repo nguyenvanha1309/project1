@@ -23,18 +23,23 @@ class AuthController extends Controller
             $ten = $allRequest['name'];
             $matkhau = $allRequest['password'];
             $user = DB::select('select UserName,PassWord,KieuUser from users ­­­­­­­­');
-            $sv=DB::select('select sinhvien_MaSv,HoTen from sinhvien ');
+            $sv=DB::select('select sinhvien_MaSv,HoTen,MaKhoa from sinhvien ');
+            $mh=DB::select('select MaKhoa from monhoc ');
+
             $dem='0';
             $gx='0';
+            $ox='0';
             foreach ($sv as $kq1 ){
                 $dx=$kq1->sinhvien_MaSv;
                 $fx=$kq1->HoTen;
+                $px=$kq1->MaKhoa;
                 if ($ten == $dx){
                     $gx=$fx;
+                    $ox=$px;
                     break;
                 }
             }
-            $data['postname'] =[$gx,$ten];
+            $data['postname'] =[$gx,$ten,$ox];
             foreach ($user as $kq ){
                 $ex=$kq->UserName;
                 $bx=$kq->PassWord;
@@ -51,21 +56,21 @@ class AuthController extends Controller
              }
             if ($ten == "" && $matkhau == "") {
                 echo "<script>alert('Bạn Chưa Nhập Thông Tin!!!')</script>";
-                return view('admin.users.log');
+                return view('trangchu');
             }
             if ($ten == "") {
                 echo "<script>alert('Bạn Chưa Nhập Tài Khoản!!!')</script>";
-                return view('admin.users.log');
+                return view('trangchu');
             }
             if ($matkhau == "") {
                 echo "<script>alert('Bạn Chưa Nhập Mật Khẩu!!!')</script>";
-                return view('admin.users.log');
+                return view('trangchu');
             }
             }
 
             if($dem=='0'){
                 echo "<script>alert('Bạn Nhập Sai Toài Khoản Hoặc Mật Khẩu!!!')</script>";
-                return view('admin.users.log');
+                return view('trangchu');
             }
 
      }

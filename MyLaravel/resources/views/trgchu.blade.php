@@ -8,7 +8,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/ttcn.css">
+    <link rel="stylesheet" type="text/css" href="ttcn.css">
 
 </head>
 
@@ -25,7 +25,7 @@
                     </a>
                 </div>
                 <div class="header-right col-md-4 col-sm-6">
-                    <p class="login"><a href="log">Đăng xuất</a></p>
+                    <p class="login"><a href="#">Đăng nhập</a></p>
                 </div>
             </div>
         </div>
@@ -35,10 +35,19 @@
             <ul class="nav">
                 <li class="nav-item">
 
-                    <a class="nav-link" href="trangchu"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
+                    <a class="nav-link" href="#"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="huongdandangki"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;diễn đàn</a>
@@ -58,7 +67,6 @@
                     <p class="name">
                         @foreach($postname as $value){{$value}}<br>
                         @endforeach
-                               
                     <p class="id"></p>
                     {!! csrf_field() !!}
 
@@ -99,200 +107,45 @@
                 </div>
             </div>
 
+            <?php 
+    $result =DB::select('select MaMon,TenMon,SoTinChi,SoTiet,KieuMonHoc,MaKhoa from monhoc ');
+     $result1 =DB::select('select MaKhoa from sinhvien ');
+     ?>
+     </div>
+     <br>
+    <a href="http://localhost/MyLaravel/public/createsv" class="btn btn-outline-success" style="margin-left: 110px; ">Chương Trình Đào Tạo</a>
+    <br>
+    <br>
+    <table class="table table-bordered">
+    <thead>
 
+      <tr>
+        <th>Mã Môn</th>
+        <th>Tên Môn</th>
+        <th>Số Tín</th>
+        <th>Số Tiết</th>
+        <th>Kiểu Môn học</th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php 
+        foreach ($result as $kq1 ):{
+                $dx=$kq1->MaKhoa;
+                if ($postname[2]!= $dx){
+                    continue;
+                }
+            } ?>
+                 <tr>
+        <td>{{$kq1->MaMon}}</td>
+        <td>{{$kq1->TenMon}}</td>
+        <td>{{$kq1->SoTinChi}}</td>
+        <td>{{$kq1->SoTiet}}</td>
+        <td>{{$kq1->KieuMonHoc}}</td>
+      </tr>
+    <?php endforeach ?>
+    </tbody>
+  </table>
 
-
-            <div class="col-md-10 ct-right">
-                <div class="list-tittle">
-                    <div class="btn-group .dropdown-menu">
-                        <button onclick="myFunction()" type="button" class="btn btn-primary dropdown-toggle abccc" data-toggle="dropdown"><span><i class="fas fa-car"></i></span>&ensp;Thông tin cá nhân </button>
-
-                        <button onclick="myFunction1()" type="button" class="btn btn-primary dropdown-toggle abccc" data-toggle="dropdown"><span><i class="fas fa-car"></i></span>&ensp;Kết quả học tập</button>
-
-                    </div>
-                </div>
-                <div class="more-list">
-                    <div id="myDIV">
-                        <table class="table table-dark">
-                            <thead>
-                                <tr>
-                                    <th scope="col">
-                                        <div class="form-group">
-                                            <label for="usr">Mã sinh viên:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="form-group">
-                                            <label for="usr">Họ và tên:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="form-group">
-                                            <label for="usr">Ngày sinh:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="form-group">
-                                            <label for="usr">Giới tính:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        <div class="form-group">
-                                            <label for="usr">Nơi sinh:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">Quê quán:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">Quốc tịch:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">Dân tộc:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <div class="form-group">
-                                            <label for="usr">Tôn giáo:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">TP xuất thân:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">Ngày vào đoàn:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">Ngày vào Đảng:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <div class="form-group">
-                                            <label for="usr">Nơi thường trú:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">ĐT di động:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">Email:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="usr">Số CMTND/CCCD:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- end mydiv-->
-
-                    <div id="myDIV1" style="display: none;">
-                        <table class="table table-dark">
-                            <thead>
-                                <tr>
-                                    <th scope="col">
-                                        <div class="form-group">
-                                            <label for="usr">Xếp loại học tập:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="form-group">
-                                            <label for="usr">Xếp loại hạnh kiểm:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="form-group">
-                                            <label for="usr">Xếp loại tốt nghiệp:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <th scope="col">
-                                        <div class="form-group">
-                                            <label for="usr">Năm tốt nghiệp:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        <div class="form-group">
-                                            <label for="usr">Điểm thưởng:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-                                    <td colspan="3">
-                                        <div class="form-group">
-                                            <label for="usr">Lý do thưởng:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <th colspan="4" scope="row">
-                                        <div class="form-group">
-                                            <label for="usr">Khen thưởng, kỷ luật:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-
-                                </tr>
-                                <tr>
-                                    <th colspan="4" scope="row">
-                                        <div class="form-group">
-                                            <label for="usr">Thông tin quá trình học tập, lao động:</label>
-                                            <input type="text" class="form-control" id="usr">
-                                        </div>
-                                    </th>
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
 
                 </div>
             </div>
@@ -300,6 +153,42 @@
     </div>
     <!--End container-->
 
+
+</div>
+     <br>
+    <a href="http://localhost/MyLaravel/public/createsv" class="btn btn-outline-success" style="margin-left: 110px; ">Đăng Kí Học</a>
+    <br>
+    <br>
+    <table class="table table-bordered">
+    <thead>
+
+      <tr>
+        <th>Mã Môn</th>
+        <th>Tên Môn</th>
+        <th>Số Tín</th>
+        <th>Kiểu Môn học</th>
+        <th>Đăng Kí Học</th>
+      </tr>
+    </thead>
+    <tbody>
+        <?php 
+        foreach ($result as $kq1 ):?>
+                 <tr>
+        <td>{{$kq1->MaMon}}</td>
+        <td>{{$kq1->TenMon}}</td>
+        <td>{{$kq1->SoTinChi}}</td>
+        <td>{{$kq1->KieuMonHoc}}</td>
+       <td><input type="checkbox" name="chonmon" value=“yes"></td>  
+      </tr>
+    <?php endforeach ?>
+    </tbody>
+  </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="footer">
         <div class="row">
@@ -315,43 +204,7 @@
             </div>
         </div>
     </div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myDIV");
-            var y = document.getElementById("myDIV1");
-            var z = document.getElementById("myDIV2");
-            var t = document.getElementById("myDIV3");
-            var f = document.getElementById("myDIV4");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-                y.style.display = "none";
-                z.style.display = "none";
-                t.style.display = "none";
-                f.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-
-        function myFunction1() {
-            var x = document.getElementById("myDIV");
-            var y = document.getElementById("myDIV1");
-            var z = document.getElementById("myDIV2");
-            var t = document.getElementById("myDIV3");
-            var f = document.getElementById("myDIV4");
-            if (y.style.display === "none") {
-                y.style.display = "block";
-                x.style.display = "none";
-                z.style.display = "none";
-                t.style.display = "none";
-                f.style.display = "none";
-            } else {
-                y.style.display = "block";
-            }
-        }
-    </script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+   
 </body>
 
 </html>
