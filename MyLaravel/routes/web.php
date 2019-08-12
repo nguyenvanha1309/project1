@@ -31,6 +31,9 @@ Route::get('/', function () {
 Route::get('trangchu','AuthController@getLogin');
 Route::post('trangchu','AuthController@postLogin');
 Route::post('trgchu','AuthController@postLogin');
+
+Route::get('dangki','dangkimonhoc@getdangki');
+Route::post('dangki','dangkimonhoc@postdangki');
 // route::get('dangnhap','LoginController@getLogin');
 // Route::post('dangnhap','LoginController@postLogin');
 

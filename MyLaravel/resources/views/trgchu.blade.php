@@ -63,7 +63,7 @@
                 <div class="avatar">
                     <img src="img/avt.jpg" width="80px" height="auto" alt="">
                     <p></p>
-                    <Form action="{{url('trgchu')}}" method="post" style="padding: 10px">
+                    <Form action="" method="post" style="padding: 10px">
                     <p class="name">
                         @foreach($postname as $value){{$value}}<br>
                         @endforeach
@@ -156,6 +156,7 @@
 
 </div>
      <br>
+     <form action="{{url('dangki')}}" method="post" style="padding: 10px">
     <a href="http://localhost/MyLaravel/public/createsv" class="btn btn-outline-success" style="margin-left: 110px; ">Đăng Kí Học</a>
     <br>
     <br>
@@ -178,18 +179,19 @@
         <td>{{$kq1->TenMon}}</td>
         <td>{{$kq1->SoTinChi}}</td>
         <td>{{$kq1->KieuMonHoc}}</td>
-       <td><input type="checkbox" name="chonmon" value=“yes"></td>  
+       <td><input type="checkbox" name="chonmon[]" value="{{$kq1->MaMon}}"</td>  
       </tr>
-    <?php endforeach ?>
+    <?php endforeach ?> 
     </tbody>
   </table>
-
+        <input type="submit"  value="ĐĂng Kí"  class="btn btn-success">
 
                 </div>
             </div>
         </div>
     </div>
-
+      {!! csrf_field() !!}
+</form>
     <div class="footer">
         <div class="row">
             <div class="col-md-4 footer-left">

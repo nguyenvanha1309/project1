@@ -72,7 +72,7 @@
                     <div class="icon" style="background-color: white;">
                         <i class="fas fa-user"></i> <b> ĐĂNG NHẬP</b>
                     </div>
-                    <Form action="{{url('trangchu')}}" method="post" style="padding: 10px">
+                    <Form action="{{url('trgchu')}}" method="post" style="padding: 10px">
                         <div class="user">
                             <i class="fas fa-user"></i>
                             <input type="text" name="name" class="form-control" placeholder="Tên đăng nhập">
