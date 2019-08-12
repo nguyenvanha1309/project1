@@ -35,19 +35,10 @@
             <ul class="nav">
                 <li class="nav-item">
 
-                    <a class="nav-link" href="#"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
+                    <a class="nav-link" href="trangchu"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
+                    <a class="nav-link" href="huongdandangki"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;diễn đàn</a>
