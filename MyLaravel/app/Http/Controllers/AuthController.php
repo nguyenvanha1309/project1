@@ -51,21 +51,21 @@ class AuthController extends Controller
              }
             if ($ten == "" && $matkhau == "") {
                 echo "<script>alert('Bạn Chưa Nhập Thông Tin!!!')</script>";
-                return view('trangchu');
+                return view('admin.users.log');
             }
             if ($ten == "") {
                 echo "<script>alert('Bạn Chưa Nhập Tài Khoản!!!')</script>";
-                return view('trangchu');
+                return view('admin.users.log');
             }
             if ($matkhau == "") {
                 echo "<script>alert('Bạn Chưa Nhập Mật Khẩu!!!')</script>";
-                return view('trangchu');
+                return view('admin.users.log');
             }
             }
 
             if($dem=='0'){
                 echo "<script>alert('Bạn Nhập Sai Toài Khoản Hoặc Mật Khẩu!!!')</script>";
-                return view('trangchu');
+                return view('admin.users.log');
             }
 
      }
