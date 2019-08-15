@@ -8,7 +8,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="ttcn.css">
+    <link rel="stylesheet" type="text/css" href="css/ttcn.css">
 
 </head>
 
@@ -23,9 +23,6 @@
                             <img src="img/logo.png" alt="">
                         </div>
                     </a>
-                </div>
-                <div class="header-right col-md-4 col-sm-6">
-                    <p class="login"><a href="#">Đăng nhập</a></p>
                 </div>
             </div>
         </div>
@@ -64,134 +61,37 @@
                     <img src="img/avt.jpg" width="80px" height="auto" alt="">
                     <p></p>
                     <Form action="" method="post" style="padding: 10px">
-                    <p class="name">
-                        @foreach($postname as $value){{$value}}<br>
-                        @endforeach
-                    <p class="id"></p>
-                    {!! csrf_field() !!}
-
+                    <p class="name" style="color: whitesmoke">
+                <?php  
+                 $sv=DB::select('select sinhvien_MaSv,HoTen,MaKhoa from sinhvien ');
+                  foreach ($sv as $kq1 ){
+                    $dx=$kq1->sinhvien_MaSv;
+                    if ($postname == $dx){
+                    $fx=$kq1->HoTen;
+                    break;}}
+                ?>  
+                   <?php
+                    echo "$fx<br>";
+                    echo "$postname";
+                     ?>
                  </Form>
                 </div>
                 <div class="under-avt">
                     <div class="btn-group-vertical">
                         <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;sơ yếu lý lịch</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;cảnh báo học vụ</button>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary dropdown-toggle accc" data-toggle="dropdown"><span><i class="fas fa-coffee" data-toggle="dropdown"></i></span>&ensp;đăng ký học 
-						    </button>
-                        </div>
-                        <button type="button" class="btn btn-primary  list-item"><span><i class="fas fa-car"></i></span>&ensp;Đăng ký lớp học tín chỉ</button>
-                        <button type="button" class="btn btn-primary list-item"><span><i class="fas fa-car"></i></span>&ensp;Đăng ký học lại & cải thiện điểm</button>
-                        <button type="button" class="btn btn-primary list-item"><span><i class="fas fa-car"></i></span>&ensp;Đăng ký học lại & cải thiện</button>
-                        <button type="button" class="btn btn-primary list-item"><span><i class="fas fa-car"></i></span>&ensp;Lớp học phần đã đăng ký</button>
-                        <button type="button" class="btn btn-primary list-item"><span><i class="fas fa-car"></i></span>&ensp;Đăng ký học ngành 2</button>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary dropdown-toggle accc" data-toggle="dropdown"><span><i class="fas fa-coffee" data-toggle="dropdown"></i></span>&ensp;
-						       thanh toán học phí
-						    </button>
-
-                        </div>
-                        <button type="button" class="btn btn-primary list-item"><span><i class="fas fa-coffee"></i></span>&ensp;Thanh toán Online</button>
-                        <button type="button" class="btn btn-primary list-item"><span><i class="fas fa-car"></i></span>&ensp;Lịch sử giao dịch</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;xem học phí</button>
+                         <a href="{{url('chuongtrinhdaotao',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</button></a>
+                        <a href="{{url('dangki',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;Đăng kí học</button></a>
                         <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem lịch học</button>
                         <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;xem lịch thi</button>
                         <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem điểm học tập</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem xem điểm rèn luyện</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;đánh giá giảng viên</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;gửi ý kiến</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;sửa tt cá nhân</button>
 
                     </div>
                 </div>
             </div>
-
-            <?php 
-    $result =DB::select('select MaMon,TenMon,SoTinChi,SoTiet,KieuMonHoc,MaKhoa from monhoc ');
-     $result1 =DB::select('select MaKhoa from sinhvien ');
-     ?>
-     </div>
-     <br>
-    <a href="http://localhost/MyLaravel/public/createsv" class="btn btn-outline-success" style="margin-left: 110px; ">Chương Trình Đào Tạo</a>
-    <br>
-    <br>
-    <table class="table table-bordered">
-    <thead>
-
-      <tr>
-        <th>Mã Môn</th>
-        <th>Tên Môn</th>
-        <th>Số Tín</th>
-        <th>Số Tiết</th>
-        <th>Kiểu Môn học</th>
-      </tr>
-    </thead>
-    <tbody>
-        <?php 
-        foreach ($result as $kq1 ):{
-                $dx=$kq1->MaKhoa;
-                if ($postname[2]!= $dx){
-                    continue;
-                }
-            } ?>
-                 <tr>
-        <td>{{$kq1->MaMon}}</td>
-        <td>{{$kq1->TenMon}}</td>
-        <td>{{$kq1->SoTinChi}}</td>
-        <td>{{$kq1->SoTiet}}</td>
-        <td>{{$kq1->KieuMonHoc}}</td>
-      </tr>
-    <?php endforeach ?>
-    </tbody>
-  </table>
-
-
-                </div>
-            </div>
         </div>
-    </div>
-    <!--End container-->
 
+    @yield('noidung')
 
-</div>
-     <br>
-     <form action="{{url('dangki')}}" method="post" style="padding: 10px">
-    <a href="http://localhost/MyLaravel/public/createsv" class="btn btn-outline-success" style="margin-left: 110px; ">Đăng Kí Học</a>
-    <br>
-    <br>
-    <table class="table table-bordered">
-    <thead>
-
-      <tr>
-        <th>Mã Môn</th>
-        <th>Tên Môn</th>
-        <th>Số Tín</th>
-        <th>Kiểu Môn học</th>
-        <th>Đăng Kí Học</th>
-      </tr>
-    </thead>
-    <tbody>
-        <?php 
-        foreach ($result as $kq1 ):?>
-                 <tr>
-        <td>{{$kq1->MaMon}}</td>
-        <td>{{$kq1->TenMon}}</td>
-        <td>{{$kq1->SoTinChi}}</td>
-        <td>{{$kq1->KieuMonHoc}}</td>
-       <td><input type="checkbox" name="chonmon[]" value="{{$kq1->MaMon}}"</td>  
-      </tr>
-    <?php endforeach ?> 
-    </tbody>
-  </table>
-        <input type="submit"  value="ĐĂng Kí"  class="btn btn-success">
-
-                </div>
-            </div>
-        </div>
-    </div>
-      {!! csrf_field() !!}
-</form>
     <div class="footer">
         <div class="row">
             <div class="col-md-4 footer-left">
@@ -199,10 +99,6 @@
             </div>
             <div class="col-md-4 footer-center">
                 <p>Copyright ©2017 Trường Đại học Sư phạm Hà Nội Phần mềm Quản lý đào tạo UniSoft 6.0 phát triển bởi <a href="">Thiên An</a></p>
-            </div>
-            <div class="col-md-4 footer-right">
-                <p class="footer-p">Sinh viên Online: <span id="sv-online">1</span></p>
-                <p class="footer-p">Khách Online: <span id="k-online">1</span></p>
             </div>
         </div>
     </div>

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/01ad2f7f4c.js"></script>
 
-
 </head>
 
 <body>
@@ -257,6 +256,11 @@
         </div>
 
     </div>
+
+    @yield('noidung');
+
+
+
     <div class="footer">
         <div class="row">
             <div class="col-md-4 footer-left">

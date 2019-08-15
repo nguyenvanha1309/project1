@@ -19,6 +19,9 @@ Route::get('select', function () {
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('dangki', function () {
+    return view('dangki');
+});
 // Route::get('trangchu', function () {
 //     return view('trangchu');
 // });
@@ -32,8 +35,11 @@ Route::get('trangchu','AuthController@getLogin');
 Route::post('trangchu','AuthController@postLogin');
 Route::post('trgchu','AuthController@postLogin');
 
-Route::get('dangki','dangkimonhoc@getdangki');
-Route::post('dangki','dangkimonhoc@postdangki');
+Route::get('dangki/{postname}','dangkimonhoc@getdangki');
+Route::post('dangki/{postname}','dangkimonhoc@postdangki');
+
+Route::get('chuongtrinhdaotao/{postname}','ctdtController@getctdt');
+Route::post('chuongtrinhdaotao/{postname}','ctdtController@postctdt');
 // route::get('dangnhap','LoginController@getLogin');
 // Route::post('dangnhap','LoginController@postLogin');
 
@@ -47,12 +53,8 @@ Route::post('dangki','dangkimonhoc@postdangki');
 
 Auth::routes(['register' => false]);
 
-Route::post('login','AuthController@check');
-
-
 Auth::routes(['register' => false]);
 Route::get('listsv', 'giaovuController@index');
 Route::get('createsv', 'giaovuController@create');
 Route::get('editsv', 'giaovuController@edit');
 Route::post('/store', ['as'=>'store','uses'=>'giaovuController@store']);
-

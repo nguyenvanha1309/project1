@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
+use App\Http\Controllers\session;
 
 
 class AuthController extends Controller
@@ -13,7 +15,6 @@ class AuthController extends Controller
     //
      public function getLogin(){
      	return view('trangchu');
-
      }
 
       public function postLogin(Request $request){
@@ -39,7 +40,7 @@ class AuthController extends Controller
                     break;
                 }
             }
-            $data['postname'] =[$gx,$ten,$ox];
+            $data['postname'] =$ten;
             foreach ($user as $kq ){
                 $ex=$kq->UserName;
                 $bx=$kq->PassWord;
