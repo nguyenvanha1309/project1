@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Campatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/ttcn.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/ttcn.css')}}">
 
 </head>
 
@@ -38,16 +38,7 @@
                     <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;diễn đàn</a>
                 </li>
             </ul>
         </div>
@@ -56,7 +47,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 ct-left ">
+            <div class="col col-xs-12 col-sm-6 col-md-2 col-lg-2  ct-left ">
                 <div class="avatar">
                     <img src="img/avt.jpg" width="80px" height="auto" alt="">
                     <p></p>
@@ -83,14 +74,15 @@
                         <a href="{{url('dangki',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;Đăng kí học</button></a>
                         <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem lịch học</button>
                         <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;xem lịch thi</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem điểm học tập</button>
+                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;<a href="{{url('diemhoctap',$postname)}}">xem điểm học tập</a></button>
 
                     </div>
                 </div>
             </div>
+            <div class="col col-xs-12 col-sm-6 col-md-10 col-lg-10  ct-right" style="backgourd-color:white">
+            @yield('noidung')         
+            </div>
         </div>
-
-    @yield('noidung')
 
     <div class="footer">
         <div class="row">

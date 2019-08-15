@@ -58,3 +58,7 @@ Route::get('listsv', 'giaovuController@index');
 Route::get('createsv', 'giaovuController@create');
 Route::get('editsv', 'giaovuController@edit');
 Route::post('/store', ['as'=>'store','uses'=>'giaovuController@store']);
+
+
+Route::get('diemhoctap/{postname}', 'dhtController@getdiem' );
+Route::post('diemhoctap/{postname}','dhtController@postdiem');
