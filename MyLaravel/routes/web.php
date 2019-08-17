@@ -31,6 +31,46 @@ Route::get('dangki', function () {
 // Route::get('log', function () {
 //     return view('admin.users.log');
 // });
+//thuong
+Route::get('log', function () {
+    return view('admin.users.log');
+});
+Route::get('tracuuvanbang', function () {
+    return view('admin.vanbang.tracuuvanbang');
+});
+Route::get('viewsearchvanbang', function () {
+    return view('viewsearchvanbang');
+});
+Route::get('huongdandangki', function () {
+    return view('admin.layout.huongdandangki');
+});
+Route::get('chuongtrinhdaotao', function () {
+    return view('admin.layout.chuongtrinhdaotao');
+});
+Route::get('trangcanhan', function () {
+    return view('admin.users.trangcanhan');
+});
+//viewall
+Route::get('viewallSK', 'ViewallController@getviewallSK');
+Route::get('viewallTB', 'ViewallController@getviewallTB');
+Route::get('viewallTT', 'ViewallController@getviewallTT');
+
+//viewall
+//noidungtintuc
+Route::get('sukien/{id}/{$tieude}', 'PageController@sukien');
+//nidungtintuc
+
+Route::get('diemhoctap/{postname}', 'dhtController@getdiem' );
+Route::post('diemhoctap/{postname}','dhtController@postdiem');
+//bientoancuc
+
+
+
+
+Route::post('tracuuvanbang','searchVanBang@postvanbang');
+// route::get('dangnhap','LoginController@getLogin');
+// Route::post('dangnhap','LoginController@postLogin');
+//thuong
 Route::get('trangchu','AuthController@getLogin');
 Route::post('trangchu','AuthController@postLogin');
 Route::post('trgchu','AuthController@postLogin');

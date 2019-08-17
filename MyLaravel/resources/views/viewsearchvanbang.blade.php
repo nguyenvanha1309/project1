@@ -92,12 +92,12 @@
                 </tr>
                 @foreach ($masinhvien as $value)
                 <tr >
-                    <td >{{$value->vanbang_MaSv}} </td>
+                    <td >{{$value->MaSv}} </td>
                     <td>{{$value->HoTen}} </td>
                     <td>{{$value->NgaySinh}} </td>
                     <td>{{$value->GioiTinh}} </td>
-                    <td>{{$value->NamTotNghiep}} </td>
                     <td>{{$value->TypeTotNghiep}} </td>
+                    <td>{{$value->NamTotNghiep}} </td>
                 </tr>
                 @endforeach 
             </tbody>

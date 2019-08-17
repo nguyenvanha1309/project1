@@ -8,13 +8,19 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\session;
-
+use App\diem;
+use App\tintuc;
+use App\thongbao;
 
 class AuthController extends Controller
 {
-    //
+    
      public function getLogin(){
-     	return view('trangchu');
+        $sukien['sukien'] =DB::table('sukien')->select('date','tieude','noidung','id')->take(4)->get();
+        $thongbao['thongbao']=DB::table('thongbao')->select('tieude','noidung','id')->take(19)->get();
+        
+         return view('trangchu',$sukien,$thongbao);
+
      }
 
       public function postLogin(Request $request){

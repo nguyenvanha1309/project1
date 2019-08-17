@@ -54,9 +54,9 @@
                     <Form action="" method="post" style="padding: 10px">
                     <p class="name" style="color: whitesmoke">
                 <?php  
-                 $sv=DB::select('select sinhvien_MaSv,HoTen,MaKhoa from sinhvien ');
+                 $sv=DB::select('select MaSv,HoTen,MaKhoa from sinhvien ');
                   foreach ($sv as $kq1 ){
-                    $dx=$kq1->sinhvien_MaSv;
+                    $dx=$kq1->MaSv;
                     if ($postname == $dx){
                     $fx=$kq1->HoTen;
                     break;}}
@@ -69,12 +69,12 @@
                 </div>
                 <div class="under-avt">
                     <div class="btn-group-vertical">
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;sơ yếu lý lịch</button>
+                        <a href="{{url('thongtinsinhvien',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp; Sơ yếu lý lịch</button></a>
                          <a href="{{url('chuongtrinhdaotao',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</button></a>
                         <a href="{{url('dangki',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;Đăng kí học</button></a>
                         <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem lịch học</button>
                         <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;xem lịch thi</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;<a href="{{url('diemhoctap',$postname)}}">xem điểm học tập</a></button>
+                        <a href="{{url('diemhoctap',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem điểm học tập</button></a>
 
                     </div>
                 </div>
