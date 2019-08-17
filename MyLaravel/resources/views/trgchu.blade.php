@@ -13,16 +13,18 @@
 </head>
 
 <body>
-   
-    <div class="header">
+<div class="header">
         <div class="header-top">
             <div class="row">
-                <div class="header-left col-md-8 col-sm-6">
+                <div class="header-left col-md-8">
                     <a href="#">
                         <div class="logo">
-                            <img src="img/logo.png" alt="">
+                            <img src="{{url('img/logo.png')}}" alt="">
                         </div>
                     </a>
+                </div>
+                <div class="header-right col-md-4">
+                    <p class="login"><a href="{{url('log')}}">Đăng xuất</a></p>
                 </div>
             </div>
         </div>
@@ -30,10 +32,7 @@
 
         <div class="header-bottom">
             <ul class="nav">
-                <li class="nav-item">
-
-                    <a class="nav-link" href="#"><span><i class="fas fa-coffee"></i></span>&ensp;Trang chủ</a>
-                </li>
+            
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
                 </li>
@@ -49,7 +48,7 @@
         <div class="row">
             <div class="col col-xs-12 col-sm-6 col-md-2 col-lg-2  ct-left ">
                 <div class="avatar">
-                    <img src="img/avt.jpg" width="80px" height="auto" alt="">
+                    <img src="{{url('img/avt.jpg')}}" width="80px" height="auto" alt="">
                     <p></p>
                     <Form action="" method="post" style="padding: 10px">
                     <p class="name" style="color: whitesmoke">

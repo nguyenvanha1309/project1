@@ -60,11 +60,11 @@
                                 <span class="field-content-month">4/2019</span> -->
                                 {{$value ->date}}
                             </div>
-                            <a href="#">{{$value ->tieude}}</a>
+                            <a href="{{url('loaitin',$value->id)}}">{{$value ->tieude}}</a>
                         </div>
                         @endforeach
                         <div class="list-group-item" align="right" style="display:block">
-                            <a href="viewallSK">
+                            <a href="{{url('viewallSK')}}">
                                     Xem tất cả </a>
                         </div>
                     </div>
@@ -88,13 +88,13 @@
                             <img align="" src="img\{{$value->anh}}">
                         </div>
                         <div>
-                            <a href="#">{{$value ->tieude}}</a>
+                            <a href="{{url('loaitinTT',$value->id)}}">{{$value ->tieude}}</a>
                             <p>{{$value ->date}}</p>
                         </div>
                     </div>
                     @endforeach
                     <div class="list-group-item" align="right" style="display:block">
-                        <a href="viewallTT">
+                        <a href="{{url('viewallTT')}}">
                                   Xem tất cả </a>
                     </div>
                 </div>
@@ -106,11 +106,11 @@
                     </div>
                     @foreach($thongbao as $value)
                     <div class="list-group-item">
-                        <a href="#">{{$value->tieude}}</a>
+                        <a href="{{url('loaitinTB',$value->id)}}">{{$value->tieude}}</a>
                     </div>
                     @endforeach
                     <div class="list-group-item" align="right" style="display:block">
-                        <a href="viewallTB">
+                        <a href="{{url('viewallTB')}}">
                                   Xem tất cả </a>
                     </div>
                 </div>

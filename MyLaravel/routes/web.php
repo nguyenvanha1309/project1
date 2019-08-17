@@ -57,8 +57,11 @@ Route::get('viewallTT', 'ViewallController@getviewallTT');
 
 //viewall
 //noidungtintuc
-Route::get('sukien/{id}/{$tieude}', 'PageController@sukien');
+Route::get('loaitin/{id}', 'PageController@loaitin');
+Route::get('loaitinTT/{id}', 'PageController@loaitinTT');
+Route::get('loaitinTB/{id}', 'PageController@loaitinTB');
 //nidungtintuc
+
 
 Route::get('diemhoctap/{postname}', 'dhtController@getdiem' );
 Route::post('diemhoctap/{postname}','dhtController@postdiem');
