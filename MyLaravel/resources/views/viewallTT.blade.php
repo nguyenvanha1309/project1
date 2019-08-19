@@ -18,7 +18,7 @@
                 <img align="" src="img\{{$value->anh}}">
             </div>
             <div>
-                <a href="#">{{$value ->tieude}}</a>
+                <a href="{{url('loaitinTT',$value->id)}}">{{$value ->tieude}}</a>
                 <p>{{$value ->date}}</p>
             </div>
         </div>

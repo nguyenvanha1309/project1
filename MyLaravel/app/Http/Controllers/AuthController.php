@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\View;
-use App\Http\Controllers\session;
 use App\diem;
 use App\tintuc;
 use App\thongbao;
@@ -22,6 +19,11 @@ class AuthController extends Controller
          return view('trangchu',$sukien,$thongbao);
 
      }
+     public function getGV(){
+         return view('giaodienGV');
+
+     }
+     
 
       public function postLogin(Request $request){
 
@@ -30,19 +32,14 @@ class AuthController extends Controller
             $ten = $allRequest['name'];
             $matkhau = $allRequest['password'];
             $user = DB::select('select UserName,PassWord,KieuUser from users ­­­­­­­­');
-            $sv=DB::select('select sinhvien_MaSv,HoTen,MaKhoa from sinhvien ');
-            $mh=DB::select('select MaKhoa from monhoc ');
-
+            $sv=DB::select('select MaSv,HoTen from sinhvien ');
             $dem='0';
             $gx='0';
-            $ox='0';
             foreach ($sv as $kq1 ){
-                $dx=$kq1->sinhvien_MaSv;
+                $dx=$kq1->MaSv;
                 $fx=$kq1->HoTen;
-                $px=$kq1->MaKhoa;
                 if ($ten == $dx){
                     $gx=$fx;
-                    $ox=$px;
                     break;
                 }
             }
@@ -57,27 +54,27 @@ class AuthController extends Controller
                     $dem='1';
                 }
                 if($cx=="GV"){   
-                    return view('sinhvien.create');
+                    return view('giaodienGV');
                     $dem='1';
                 }
              }
             if ($ten == "" && $matkhau == "") {
                 echo "<script>alert('Bạn Chưa Nhập Thông Tin!!!')</script>";
-                return view('trangchu');
+                return view('admin.users.log');
             }
             if ($ten == "") {
                 echo "<script>alert('Bạn Chưa Nhập Tài Khoản!!!')</script>";
-                return view('trangchu');
+                return view('admin.users.log');
             }
             if ($matkhau == "") {
                 echo "<script>alert('Bạn Chưa Nhập Mật Khẩu!!!')</script>";
-                return view('trangchu');
+                return view('admin.users.log');
             }
             }
 
             if($dem=='0'){
                 echo "<script>alert('Bạn Nhập Sai Toài Khoản Hoặc Mật Khẩu!!!')</script>";
-                return view('trangchu');
+                return view('admin.users.log');
             }
 
      }

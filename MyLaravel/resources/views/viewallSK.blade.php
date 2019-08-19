@@ -11,7 +11,7 @@
                 <span class="field-content-month">4/2019</span> -->
                 {{$value ->date}}
             </div>
-            <a href="#">{{$value ->tieude}}</a>
+            <a href="{{url('loaitin',$value->id)}}">{{$value ->tieude}}</a>
         </div>
         @endforeach
     </div>

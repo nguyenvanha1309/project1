@@ -39,24 +39,28 @@
 					 		<option value="{{$key2->MaK}}">{{$key2->MaK}}</option>
 						<?php endforeach ?>	
 		 				</select><br><br>
-		 	<button type="submit" class="btn btn-primary">Submit</button>
+		 	<button type="submit" class="btn btn-primary">Thêm</button>
 		 </form>
 		</div>
 	@extends('giaodienGV.footer');
 	<style>	
 		body{
-			text-align: center;
-			margin: 0 auto;
+			text-align: left;
+			margin: 0px auto;
 		}
 		form{
-			padding: 10px 10px;
-			border: 2px solid #999;
+			padding: 10px 50px;
+			border: 4px solid green;
+			border-radius: 30px;
 			width: 100%;
+			margin-left: 100px;
+
+		}
+		h3{
 			text-align: center;
+			color: green;
 		}
-		input{
-			border-radius: 10;
-		}
+		
 	</style>
 </body>
 </html>

@@ -34,7 +34,7 @@
             <ul class="nav">
             
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
+                    <a class="nav-link" href="{{url('chuongtrinhdaotao',$postname)}}"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
@@ -70,15 +70,15 @@
                     <div class="btn-group-vertical">
                         <a href="{{url('thongtinsinhvien',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp; Sơ yếu lý lịch</button></a>
                          <a href="{{url('chuongtrinhdaotao',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;chương trình đào tạo</button></a>
-                        <a href="{{url('dangki',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;Đăng kí học</button></a>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem lịch học</button>
-                        <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;xem lịch thi</button>
+                       <a href="{{url('dangki',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;Đăng kí học</button></a>
+                        <a href="{{url('lichhoc',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem lịch học</button></a>
+                       <a href="{{url('xemlichthi',$postname)}}"> <button type="button" class="btn btn-primary accc"><span><i class="fas fa-coffee"></i></span>&ensp;xem lịch thi</button></a>
                         <a href="{{url('diemhoctap',$postname)}}"><button type="button" class="btn btn-primary accc"><span><i class="fas fa-car"></i></span>&ensp;xem điểm học tập</button></a>
 
                     </div>
                 </div>
             </div>
-            <div class="col col-xs-12 col-sm-6 col-md-10 col-lg-10  ct-right" style="backgourd-color:white">
+            <div class="col col-xs-12 col-sm-6 col-md-10 col-lg-10  ct-right" style="background:white">
             @yield('noidung')         
             </div>
         </div>

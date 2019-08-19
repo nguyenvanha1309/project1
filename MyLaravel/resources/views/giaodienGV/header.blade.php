@@ -30,9 +30,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="TBLDKH.html"><span><i class="fas fa-car"></i></span>&ensp;lịch đăng kí học</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Tracuuvanbang.html"><span><i class="fas fa-car"></i></span>&ensp;tra cứu văn bằng</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="huongdandangki.html"><span><i class="fas fa-car"></i></span>&ensp;hướng dẫn đăng ký</a>
                         </li>

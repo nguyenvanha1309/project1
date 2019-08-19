@@ -6,7 +6,7 @@
         </div>
         @foreach($thongbao as $value)
         <div class="list-group-item">
-            <a href="#">{{$value->tieude}}</a>
+            <a href="{{url('loaitinTB',$value->id)}}">{{$value->tieude}}</a>
         </div>
         @endforeach
     </div>

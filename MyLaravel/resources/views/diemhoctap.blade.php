@@ -1,6 +1,13 @@
 @extends('trgchu')
 @section('noidung')
-
+<?php  
+                 $sv=DB::select('select MaSv,HoTen,MaKhoa from sinhvien ');
+                  foreach ($sv as $kq1 ){
+                    $dx=$kq1->MaSv;
+                    if ($postname == $dx){
+                    $fx=$kq1->HoTen;
+                    break;}}
+                ?> 
 <?php  
                  $sv=DB::select('select MaSv,MaMon,Ky,DiemCC,DiemCK,DiemGK,DiemTB,DiemChu from num');
     

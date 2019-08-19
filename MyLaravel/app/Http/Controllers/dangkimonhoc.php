@@ -14,34 +14,50 @@ class dangkimonhoc extends Controller
 
      public function postdangki(Request $request,$postname){
      	$allRequest  = $request->all();
-         $ten = $allRequest['chonmon'];
-
-        $mh = DB::select('select MaMon,TenMon,SoTinChi,SoTiet,KieuMonHoc,MaKhoa from monhoc');
-        if($ten==''){
- 		 		echo "<script>alert('Bạn Chưa Nhập Thông Tin!!!')</script>";
- 		 	}
- 		 	var_dump($ten);
-        $data['post'] =["4"];
-       	//return view('dangki');
+        $ten = $allRequest['chonmon'];
+        // var_dump($ten);
+        $mh = DB::select('select MaMon,TenMon,SoTinChi,SoTiet,MaKhoa,tuchon,batbuoc from monhoc');
+        $mhdk=DB::select('select MaMon from dangky');
  		 foreach ($ten as $kq1 ){
  		 		foreach ($mh as $kq2) {
  		 			$dx=$kq2->MaMon;
- 		 			if ($kq1 ==$dx) {
- 		 				echo '<table class="table table-bordered">
-						      <tr>  
-						        <td>'; echo $kq2->MaMon; echo '</td>
-						        <td>'; echo $kq2->TenMon; echo' </td>
-						        <td>'; echo $kq2->SoTinChi; echo'</td>
-						      </tr>
+ 		 			$cx=$kq2->TenMon;
+ 		 			$ex=$kq2->SoTinChi;
+ 		 			$kx=$kq2->SoTiet;
+                    $mx=$kq2->tuchon;
+                    $gx=$kq2->batbuoc;
+ 		 			if ($kq1==$dx) {
+                         foreach ($mhdk as $key1 ) {
+                             $ma1 = $key1->MaMon;
+                             $check = 1;
+                             if ($ma1 == $kq1) {
+                                 $check = 2;
+                                 break;
+                             }
+                         }
+                         if ($check == 1) {
+                              $datadangki = array(
+                                'MaMon'  => $dx,
+                                'TenMon' => $cx,
+                                'SoTinChi' => $ex,
+                                'SoTiet' => $kx,
+                                'MaSv'=>$postname,
+                                'tuchon' =>$mx,
+                                'batbuoc'=>$gx,
+                                 );
+                              $insertData = DB::table('dangky')->insert($datadangki);
+                         }
+                         else{
+            
+                         }
 
-						  </table>'; 
-					
-						 
+
  		 			}
  		 		}
             } 
-            	  return view('dangki',compact('postname'));
+            	  return view('lichhoc',compact('postname'));
 
-     }
+
+           }
 
 }
