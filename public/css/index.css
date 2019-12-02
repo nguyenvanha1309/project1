@@ -1,0 +1,432 @@
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .075);
+    font-weight: 700;
+}
+
+header a.navbar-brand img {
+    height: 60px;
+}
+
+header form {
+    flex: 1;
+}
+
+header form button {
+    background-color: transparent;
+}
+
+header form button:hover {
+    background-color: #1387b4;
+}
+
+header form button {
+    margin-right: .5rem;
+}
+
+header form button.my-3 {
+    margin-right: 0;
+    background-color: #ff8514;
+    width: 100px;
+}
+
+header form button.my-3:hover {
+    background-color: #1387b4;
+}
+
+div.inf-web {
+    padding: 50px 50px;
+    background-color: #f2f2f2;
+    overflow: auto;
+}
+
+div.card-text {
+    font-size: 14px;
+}
+
+div.inf-web .btn-primary {
+    background-color: #ff8514;
+    border: 1px solid #ff8514;
+    border-radius: 10px;
+}
+
+div.video {
+    min-height: 626px;
+    padding: 50px 50px;
+    background-image: url("background/bg_video.jpg");
+    background-repeat: repeat;
+}
+
+div.news div.row {
+    padding: 0 50px 50px 50px;
+}
+
+div.content div.row div.card {
+    margin-bottom: 50px;
+}
+
+div.content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+footer {
+    padding-top: 50px;
+    background-color: #f2f2f2;
+}
+
+footer div.content div.card {
+    border: none;
+    background-color: #f2f2f2;
+}
+
+footer div.content div.card .card-body {
+    padding: 0;
+}
+
+footer div.content div.card .reset ul li {
+    margin-top: 10px;
+}
+
+div.tinmoi a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+div.tinmoi a:hover {
+    color: #f69321;
+}
+
+footer div.content div.card .reset ul li i.fas {
+    color: #f69321;
+}
+
+footer ul li a {
+    border: 1px solid #e09b23;
+    color: #f69321;
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+    margin-right: 5px;
+    text-align: center;
+    width: 40px;
+    border-radius: 50%;
+}
+
+footer ul li a:hover {
+    color: #f2f2f2;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+footer ul li a:hover {
+    background-color: #f69321;
+}
+
+#form_dangky .dk_news form .form-group .form-control {
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 35px;
+}
+
+#form_dangky .dk_news form .form-group i {
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    color: #dddddd;
+    font-size: 18px;
+}
+
+.main-test {
+    padding: 20px 0;
+    overflow: auto;
+    background-color: #34b0dc;
+}
+
+.main-test-2 {
+    padding: 0 50px;
+}
+
+.main-test-2 ul {
+    float: left;
+    margin-top: 100px;
+}
+
+.main-test-2 ul li {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.main-test-2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-test-2 ul li.lop1 {
+    background-color: #0aaed7;
+}
+
+.main-test-2 ul li.lop2 {
+    background-color: #f69321;
+}
+
+.main-test-2 ul li.lop3 {
+    background-color: #18ca00;
+}
+
+.main-test-2 ul li.lop4 {
+    background-color: #8b40da;
+}
+
+.main-test-2 ul li.lop5 {
+    background-color: #0886b3;
+}
+
+.main-test-2 ul li span {
+    margin-left: 10px;
+    line-height: 100px;
+}
+
+.list-test {
+    padding: 80px;
+    float: none;
+    margin: 45px 0px 45px 55px;
+    height: 100px;
+    width: 95%;
+    background-color: white;
+    border: 1px;
+    border-radius: 20px;
+    height: 555px;
+}
+
+.list-test-one div {
+    text-align: center;
+}
+
+.list-test-one div a {
+    text-decoration: none;
+    color: gray;
+}
+
+.list-test-one {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-row-gap: 20px;
+}
+
+.list-test-one img {
+    height: 80px;
+}
+
+.test-title {
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 43px;
+    color: white;
+}
+
+.main-ul {
+    display: grid;
+    grid-template-columns: 35.333% 25.333% 35.333%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.main-ul-2 {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
+}
+
+.main-ul-2 li:hover {
+    background-color: white;
+    border: 5px solid #f69321;
+}
+
+.main-ul-2 li {
+    border: 5px solid #fddfbb;
+    border-radius: 20px;
+    height: 150px;
+    background-color: #fddfbb;
+}
+
+.main-ul-2 li span {
+    color: #f7941e;
+    font-size: 25px;
+    font-weight: bold;
+    top: 25px;
+    left: 20px;
+}
+
+div.test-title-img {
+    padding: 10px 50px;
+}
+
+.main-ul li {
+    text-align: center;
+    font-size: 22px;
+    color: #4a4a4a;
+    text-align: justify;
+}
+
+li.giaovien {
+    text-align: center;
+}
+
+.doing {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    justify-content: center;
+    padding: 50px;
+    height: 400px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.doing div ul.ovuong {
+    float: left;
+}
+
+.doing div ul.ovuong li {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+}
+
+.ul-dapan {
+    float: left;
+}
+
+.ul-dapan li {
+    margin: 17px 0 5px 5px;
+}
+
+
+/*Ipad ngang(1024 x 768)*/
+
+@media screen and (max-width: 1024px) {
+    ul.main-ul {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .main-ul-2 {
+        display: grid;
+        grid-column-gap: 40px;
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+    }
+}
+
+
+/*Ipad dọc(768 x 1024)*/
+
+@media screen and (max-width: 768px) {}
+
+
+/*Tablet nhỏ(480 x 640)*/
+
+@media screen and (max-width: 480px) {
+    ul.main-ul {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .main-ul-2 {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+
+/*Iphone(480 x 640)*/
+
+@media screen and (max-width: 320px) {
+    ul.main-ul {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .main-ul-2 {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+
+/*Smart phone nhỏ*/
+
+@media screen and (max-width: 240px) {
+    ul.main-ul,
+    .main-ul-2 {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+
+#myBtn {
+    width: 42px;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #ff8514;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 10px;
+    /* Some padding */
+    border-radius: 10px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
