@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class lienhe extends Model
 {
     //
+    public $timestamps = false;
     protected $table = "lienhe";
    
 }

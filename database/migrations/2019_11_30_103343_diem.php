@@ -17,7 +17,7 @@ class Diem extends Migration
             $table->primary('maDiem');
             $table->string('maDiem');
             $table->string('maDeThi');
-            $table->string('maHV');
+            $table->integer('maHV')->unsigned();
             $table->time('do_time');
             $table->integer('diemDatDuoc');
             $table->integer('diemMax');

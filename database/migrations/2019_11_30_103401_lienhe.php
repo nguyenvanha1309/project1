@@ -20,7 +20,7 @@ class Lienhe extends Migration
             $table->string('diaChiLH');
             $table->integer('SDT');
             $table->string('state');
-            $table->string('maHV');
+            $table->integer('maHV')->unsigned();
             $table->foreign('maHV')->references('maHV')->on('hocvien')->onDelete('cascade');;
         });
     }

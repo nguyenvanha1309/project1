@@ -12,14 +12,13 @@ class hocvien extends Seeder
     public function run()
     {  
     	$arr = [
-            'maHV' => '1',
     		'tenHV' => 'Công Học Viên :)',
     		'diaChi' => 'Chương Mỹ',
     		'SDT' => '021321214',
     		'ngaySinh' => '1998/11/11',
     		'gioiTinh' => 'Chưa Xác Địngg',
     		'email' => 'dsadas@gmail.com',
-    		'user_id' => '2',
+            'user_id'=>1
     	];
         DB::table('hocvien')->insert($arr);
     }

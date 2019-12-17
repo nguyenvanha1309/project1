@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class dethi extends Model
 {
     //
+    public $timestamps = false;
     protected $table = "dethi";
    
 }

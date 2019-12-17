@@ -12,12 +12,11 @@ class nhanvien extends Seeder
     public function run()
     {
          $arr = [
-            'maNV' => '1',
     		'tenNV' => 'Hà Lộc',
     		'diaChi' => 'QNinh',
     		'SDT' => '039999999',
     		'email' => 'QNinh',
-    		'user_id' => '1'
+            'user_id'=>1
 
 
     	];

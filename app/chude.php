@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class chude extends Model
 {
     //
+    public $timestamps = false;
     protected $table = "chude";
    
 }

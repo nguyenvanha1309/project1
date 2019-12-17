@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class diem extends Model
 {
     //
+    public $timestamps = false;
     protected $table = "diem";
    
 }

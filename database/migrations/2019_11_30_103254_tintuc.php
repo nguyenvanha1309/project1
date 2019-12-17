@@ -19,7 +19,9 @@ class Tintuc extends Migration
             $table->string('tieuDe');
             $table->string('noiDung');
             $table->date('thoiGian');
-            $table->string('maNV');
+            $table->integer('maNV')->unsigned();
+            $table->integer('viewTinTuc');
+            $table->string('anhTinTuc');
             $table->foreign('maNV')->references('maNV')->on('nhanvien')->onDelete('cascade');;
         });
     }

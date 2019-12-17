@@ -12,21 +12,27 @@ class user extends Seeder
     public function run()
     {	
     	$arr = [
-            'user_id' => '1',
-    		'username' => 'admin',
-    		'password' => bcrypt('admin'),
+    		'username' => 'nhanvien',
+    		'password' => bcrypt('nhanvien'),
     		'chucVu' => 1,
             'remember_token' => Str::Random(20),
     	];
         DB::table('user')->insert($arr);
 
         $arr1 = [
-            'user_id' => '2',
             'username' => 'hocvien',
             'password' => bcrypt('hocvien'),
             'chucVu' => 2,
             'remember_token' => Str::Random(20),
         ];
         DB::table('user')->insert($arr1);
+
+        $arr2 = [
+            'username' => 'adminkns',
+            'password' => bcrypt('adminkns'),
+            'chucVu' => 3,
+            'remember_token' => Str::Random(20),
+        ];
+        DB::table('user')->insert($arr2);
     }
 }

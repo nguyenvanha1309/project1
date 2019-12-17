@@ -14,13 +14,12 @@ class Nhanvien extends Migration
     public function up()
     {
         Schema::create('nhanvien', function (Blueprint $table) {
-            $table->primary('maNV');
-            $table->string('maNV');
+            $table->Increments('maNV')->unsigned();
             $table->string('tenNV');
             $table->string('diaChi');
             $table->integer('SDT');
             $table->string('email');
-            $table->string('user_id');
+            $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('user_id')->on('user')->onDelete('cascade');;
         });
     }

@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class nhanxet extends Model
 {
     //
+    public $timestamps = false;
     protected $table = "nhanxet";
    
 }

@@ -19,6 +19,10 @@ class Video extends Migration
             $table->string('tenVD');
             $table->string('linkVD');
             $table->string('maBH');
+            $table->integer('viewVD');
+            $table->string('anhVD');
+            $table->string('motaVD');
+            $table->string('noidungVD');
             $table->foreign('maBH')->references('maBH')->on('baihoc')->onDelete('cascade');;
            
             });

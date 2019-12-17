@@ -21,7 +21,7 @@ class Dethi extends Migration
             $table->string('question');
             $table->string('answer');
             $table->time('thoiGian');
-            $table->string('maHV');
+            $table->integer('maHV')->unsigned();
             $table->foreign('maCD')->references('maCD')->on('chude')->onDelete('cascade');;
             $table->foreign('maHV')->references('maHV')->on('hocvien')->onDelete('cascade');;
         });

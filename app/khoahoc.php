@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class khoahoc extends Model
 {
     //
+    public $timestamps = false;
     protected $table = "khoahoc";
    
 }

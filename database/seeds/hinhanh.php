@@ -15,7 +15,8 @@ class hinhanh extends Seeder
             'maHA' => '1',
     		'tenHA' => 'CTên Hình ảnh',
     		'linkHA' => 'linhhinhanh.com',
-    		'maBH' => '1'
+    		'maBH' => '1',
+            'viewHA' =>  '10000'
     	];
         DB::table('hinhanh')->insert($arr);
     }

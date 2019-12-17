@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
 ul,
 li {
     list-style: none;
@@ -10,6 +21,19 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+/* tintuc */
+
+div.set-tintuc {
+    margin-top: 30px;
+}
+
+img.set-tintuc-chitiet {
+    max-width: 200px;
+    justify-content: center;
+}
+
+
+/* tintuc */
 
 #menu {
     position: fixed;
@@ -17,7 +41,7 @@ body {
     width: 100%;
     left: 0;
     z-index: 9999;
-    background-color: rgba(0, 0, 0, .075);
+    background-color: rgba(19, 135, 180, 0.83);
     font-weight: 700;
 }
 
@@ -56,6 +80,10 @@ div.inf-web {
     background-color: #f2f2f2;
     overflow: auto;
 }
+/*căn dropdown hocvien*/
+div.dropdown-menu{
+    left: -111px !important;
+} 
 
 div.card-text {
     font-size: 14px;
@@ -68,14 +96,19 @@ div.inf-web .btn-primary {
 }
 
 div.video {
-    min-height: 626px;
-    padding: 50px 50px;
-    background-image: url("background/bg_video.jpg");
+    min-height: 400px;
+    padding: 10px 50px;
     background-repeat: repeat;
 }
 
+img.set {
+    width: 100%;
+    max-height: 177px;
+    object-fit: cover;
+}
+
 div.news div.row {
-    padding: 0 50px 50px 50px;
+    padding: 0 50px 0 50px;
 }
 
 div.content div.row div.card {
@@ -88,11 +121,11 @@ div.content h1 {
     text-transform: capitalize;
     text-align: center;
     color: white;
-    margin-bottom: 50px;
+    margin: 10px 0;
 }
 
 footer {
-    padding-top: 50px;
+    padding-top: 40px;
     background-color: #f2f2f2;
 }
 
@@ -148,7 +181,16 @@ footer ul li a:hover {
     background-color: #f69321;
 }
 
-#form_dangky .dk_news form .form-group .form-control {
+
+/* Đăng kí */
+
+div.dk_news {
+    width: 400px;
+    margin: auto;
+}
+
+
+/* #form_dangky .dk_news form .form-group .form-control {
     width: 250px;
     height: 50px;
     font-size: 16px;
@@ -161,7 +203,7 @@ footer ul li a:hover {
     left: 10px;
     color: #dddddd;
     font-size: 18px;
-}
+} */
 
 .main-test {
     padding: 20px 0;
@@ -182,6 +224,7 @@ footer ul li a:hover {
     width: 100px;
     height: 100px;
     border-radius: 50px;
+    text-align: center;
 }
 
 .main-test-2 ul li a {
@@ -255,6 +298,9 @@ footer ul li a:hover {
     font-weight: bold;
     line-height: 43px;
     color: white;
+}
+div.dangnhap{
+    margin-top: 86px;
 }
 
 .main-ul {
@@ -340,6 +386,21 @@ li.giaovien {
 }
 
 
+/* ĐĂNG NHẬP */
+
+div.frm-dn {
+    width: 400px;
+    margin: auto;
+}
+
+
+/* facebook */
+
+div._10b6 {
+    display: none;
+}
+
+
 /*Ipad ngang(1024 x 768)*/
 
 @media screen and (max-width: 1024px) {
@@ -372,6 +433,13 @@ li.giaovien {
         display: grid;
         grid-template-columns: 100%;
     }
+    div.frm-dn {
+        width: 100%;
+    }
+    footer div.news {
+        height: auto;
+        overflow: inherit;
+    }
 }
 
 
@@ -386,6 +454,13 @@ li.giaovien {
         display: grid;
         grid-template-columns: 100%;
     }
+    div.frm-dn {
+        width: 100%;
+    }
+    footer div.news {
+        height: auto;
+        overflow: inherit;
+    }
 }
 
 
@@ -396,6 +471,13 @@ li.giaovien {
     .main-ul-2 {
         display: grid;
         grid-template-columns: 100%;
+    }
+    div.frm-dn {
+        width: 100%;
+    }
+    footer div.news {
+        height: auto;
+        overflow: inherit;
     }
 }
 

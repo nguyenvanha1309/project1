@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class video extends Model
 {
     //
+    public $timestamps = false;
     protected $table = "video";
    
 }

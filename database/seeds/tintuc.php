@@ -17,7 +17,9 @@ class tintuc extends Seeder
     		'tieuDe' => 'Video Dạy Kỹ Năng Sống',
     		'noiDung' => 'Video Dạy Kỹ Năng Sống',
     		'thoiGian' => '1998/9/8',
-    		'maNV' => '1'
+    		'maNV' => '1',
+            'viewTinTuc'=>'100000',
+            'anhTinTuc'=>'aaaaa.com'
     	];
         DB::table('tintuc')->insert($arr);
     }

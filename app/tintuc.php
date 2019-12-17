@@ -11,6 +11,7 @@ use Illuminate\Notifications\Notifiable;
 class tintuc extends Model
 {
     //
+    public $timestamps = false;
     protected $table = "tintuc";
    
 }

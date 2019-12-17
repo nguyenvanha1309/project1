@@ -19,6 +19,7 @@ class Hinhanh extends Migration
             $table->string('tenHA');
             $table->string('linkHA');
              $table->string('maBH');
+             $table->integer('viewHA');
              $table->foreign('maBH')->references('maBH')->on('baihoc')->onDelete('cascade');;
         });
     }
